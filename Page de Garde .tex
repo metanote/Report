@@ -1,0 +1,158 @@
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+\documentclass[a4paper,12pt,titlepage]{report}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{french}
+\setmainfont[ Path = /usr/share/fonts/opentype/public/oldstandard/]{OldStandard-Regular.otf}
+\usepackage{graphicx}
+\usepackage{xcolor} %les couleurs
+\definecolor{myblue}{rgb}{0.2,0.4,1}
+\usepackage[lmargin=2cm,rmargin=2cm,tmargin=2cm,bmargin=2cm]{geometry} %les marges ...
+\usepackage{fancybox} %pour la commande ovalbox
+\begin{document}
+\begin{titlepage}
+
+%\begin{center}
+
+\begin{minipage}[b]{\linewidth}
+\begin{center}
+\color{blue}
+\textsc{REPUBLIQUE TUNISIENNE \\
+MINISTERE DE L'ENSEIGNEMENT SUPERIEUR,\\
+DE LA RECHERCHE SCIENTIFIQUE ET DE LA TECHNOLOGIE \\
+UNIVERSITE TUNIS EL MANAR }
+
+\includegraphics[width=0.3\linewidth]{logo}
+
+\end{center}
+\end{minipage}
+
+
+\begin{minipage}[b]{\linewidth}
+\centerline{
+\color{myblue}
+\textsc{INSTITUT SUPERIEUR D'INFORMATIQUE}
+}
+\end{minipage}
+\par
+\vspace{1cm}
+
+\begin{minipage}[b]{\linewidth}
+\begin{center}
+\color{black}
+\textsc{\textbf{MÉMOIRE DE MASTÈRE}}
+\end{center}
+\end{minipage}
+\vspace{1cm}
+
+\begin{minipage}[b]{\linewidth}
+\begin{center}
+\texttt{Présenté en vue de l'obtention du 
+Diplôme de mastère de recherche en Génie logiciel \\
+Option:Logiciels et Systèmes Critiques }
+\end{center}
+\end{minipage}
+\vspace{1.5cm}
+
+\hspace{4cm}\begin{minipage}[b]{0.5\linewidth}
+\textsc{Par: Gherib Boutheina}
+\end{minipage}
+\vspace{1.5cm}
+
+\begin{center}\ovalbox{\begin{minipage}[b]{0.5\linewidth}
+\centering \fontsize{18}{24}\selectfont 
+\bfseries{Protection de la vie privée \\
+dans les réseaux sociaux : \\
+principalement Facebook}
+\end{minipage}}
+\end{center}
+\vspace{4cm}
+
+\begin{minipage}[b]{\linewidth}
+\texttt{Encadreur:Nawel Ben Salem Grati}
+\vspace{2cm}
+
+{\large Année Universitaire:2011-2012}
+\end{minipage}
+
+\end{titlepage}
+\end{document}
