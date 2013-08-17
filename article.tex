@@ -1,0 +1,88 @@
+\documentclass{article}
+\begin{document}
+Article ::
+
+
+les sites web comme Facebook, mySpace, LinkedIn, OrKut, Google+ ?
+gagnent chaque jour des millions d'utilisateurs, mais on commence à apercevoir comme même des utilisateurs qui désactive leur compte facebook ou autres article sur BEGEEK http://www.begeek.fr/facebook-chute-daudience-et-une-perte-de-plusieurs-millions-dutilisateurs-91030 [facebook chute].
+Selon SocialBakers, ces 6 derniers mois le réseau de Mark Zuckerberg aurait perdu 9 millions d?abonnés sur le sol américain. 
+
+Ces sites présentes trois problèmes majeurs:
+Le premier c'est que les informations dans un site ne peuvent pas être utiliser dans les autres sites.
+Deuxièmement ces sites ne permettent pas au utilisateurs de contrôler leurs données personnelles diffusés ce qui entraîne des problèmes de confidentialité potentiels.
+
+Et les données contrôler par la firme peuvent être vendu commerçants puis au gouvernement dont elle dépend, réutiliser ... 
+
+Ces problèmes peuvent être résolue en adoptant une approche décentralisée pour les réseaux sociaux, avec cette approche les utilisateurs n'ont pas à être limitée par un service social.
+cette approche peut fournir le même niveau voir plus d'utilisateurs comme la plus part des réseaux sociaux actuelles et de plus elle donne au utilisateurs plus de contrôle sur leurs données.
+
+Le réseau social distribuée est basé sur les téchnologies ouvertes : Linked Data, les ontologies du web sémantique, les systèmes d'identités unique WEBID et le access contrôle (web access contrôle).
+Les URIs des identificateurs permettent au framework décentralisée d'être distribuée extensible, comme les utilisateurs, les applications, les données référencer à leurs URIs
+
+Etude des réseaux sociaux existant :
+
+les débuts décentralisés d?internet 
+
+la modélisation d'un réseau social décentralisé qui élimine la dualité entre le fournisseur de service et l'utilisateur, le modèle client/serveur, remplacer par une situation ou chaque utilisateur à son propre serveur (chaque client est un serveur) c'est loin d'être une nouveauté absolu mais c'est plustôt c'est un retour aux origines d'internet. 
+En effet depuis le début du "réseau des réseaux" le principe de décentalisation a été à la base de transmission et de communication qui y circule.  Pourtant en 1990 l'introduction du web a conduit progressivement à un modèle client/serveur;  les services diffuser sur internet les plus répandus(les réseaux sociaux(Twitter), les services de stockage des données numérique(dropbox)?)
+sont conçus à partir d'un modèle technique dans lesquels l'utilisateur final demande une donnée, information ou service à un puissant centre de serveurs qui stockent les informations et gèrent le trafic sur le réseau donc même sur internet si le trafic fonctionne avec le principe de distribution généralisée actuellement il est concentré autour de serveurs qui autorisent l'accès au contenu.
+Pourtant la conception d'un réseau décentralisé de façon que la communication /les échanges auront lieu entre des noeuds jouant un rôle symétrique dans le système c'est une alternative possible qui est le plus à même d'assurer la durabilité du réseau Internet.
+
+Des réseaux sociales décentralisé sur le Net :
+un nombre de projet actuellement relèvent le défi à créer le réseau social décentralisé qui puisse ériger à compétiteur crédible et fiable de Facebook.
+
+Diaspora :
+
+Diaspora c'est le premier réseau social décentralisé qui a eu un très grand écho dans les médias histoire ou différentes ordinateurs indépendant dits "graines" sont amenés directement entre eux tout en abritant leurs propre profil.
+
+- NoseRub : c'est un protocole distribué sous licence MIT  Massachusetts Institute of Technology 
+il a été créé par Dirk Olbertz, permettant aux utilisateurs de réseau de garder les information de leur profile sur leur propre terminaux, et à leurs terminaux d'interagir et de se synchroniser automatiquement.
+
+
+TENT : Tent est un protocole de communication distribués. Tent peut être utilisé comme un emplacement de stockage personnel des données, un seul signe sur le service, et / ou un réseau social distribué. N'importe qui peut héberger leur propre serveur de tent. En plus d'accueillir des tents, Tent.is donne quelques applications de base pour aider les utilisateurs à démarrer, une application d'administration du serveur et une application de micro-blogging.
+
+http://en.wikipedia.org/wiki/Tent_(protocol) from wiki tent is a protocol for open, decentralized social networking.
+
+Both the protocol / open source staff and Tent.is are built and maintained by the same team which is half American, half Canadian...
+c'est un protocole, ce n'est pas une plate-forme. n'importe quelle personne peux crée un serveur Tent. il n'est pas centralisée pour limiter les autorités des développeurs ou les utilisateurs.
+
+les posts sont au coeur de tent protocole, Chaque morceau de données dans la tent, à partir d'un message d'état de configuration de l'application, est stockée dans un post.
+
+les Posts sont du JSON consiste de trois composants logic :
+-metadata 
+-content 
+-binary attachment
+Tent vous permet de sauvegarder vos données dans une place dont vous avez le contrôle. 
+
+vous pouvez choisir un fournisseur d'hébergement ou lancer votre propre serveur.
+
+si vous souhaitez déplacer les hosts vous aurez vos données et relations.
+
+tent utilise https & JSON pour transporter les posts entre les serveurs et les apps.
+les entités sont les utilisateurs de tant il autorisent apps, établi des relations et lire/publier des posts les entités sont définie avec leur entité URL; https/http URL liée les métadata
+ chaque entité a 1 ou plusieurs serveur qui la représente.
+posts sont les atomics unité de contenu dans tent chaque post est un JSON, ils ont des fichiers attacher.
+APPS fourni des UI (user interface) pour tent.
+tent c'est une machine readable JSON api les apps doivent être autorisée avec oauth2
+relationShips : les entités établissent des relations lorsque il envoient des messages qui mentionnent d'autres entités. 
+comparer tent avec RDF et pour quoi on choisie de faire une version RDF de Stample au lieu d'avoir une 
+
+On peut aussi mentionner diaspora : free personnel serveur web qui implement distributed social networking service 
+
+les fonctionnalisées trouver aussi sur les sites d'information communautaires comme haker news peut être reproduite avec tent, mais nécessairement architecturée d'une manière différente. les messages et les commentaires sont situé sur le serveur tent au lieu d'être regroupé sur un site unique ou base de donnée 
+
+
+Les données sont stockées dans tent comme messages. Messages, comme les fichiers, sont tapés. Il ya un petit nombre de types de poste prévues par le protocole que les serveurs utilisent des tentes. Les développeurs sont libres de créer de nouveaux types de poste pour le contenu / stockage de données.
+
+
+
+-En france Turbulences :  propose une solution technologique open-source, utilisant pour une variété d'acteurs institutionnels et de secteur privé afin d'assembler et de lancer leur service de réseau social, intégré au services en ligne existant au travers de protocoles et de standards libres
+
+
+La question : Ces alternatives de réseaux sociaux décentralisé prendra-t-elle suffisamment pied pour constitué un véritable défi pour le géant Facebook ?
+
+
+le point d'interrogation principale concerne sans doute la réceptivité des utilisateurs à la possibilité de migrer non seulement sur une nouvelle plate-forme, mais aussi sur une application dans la prise en main, la facilité d'utilisation et les bénéfices sont peut être moins immédiats "la gestion en autonomie de son propre 'petit' serveur".
+les différents projet expérimentent à la décentralisation appliqué aux réseaux sociaux présentent peut être une premier réelle tentative, a la fois social et technique d'optimisation, des outils de réseautage social.
+
+Avec le team Stample souhaitent avoir deux versions une centralisé stable en changent l'ergonomie de l'apprentissage de l'utilisateur et en l'offrent des nouvelles fonctionnalités et puis quand on réussit à stabiliser la version décentralisé nous allons le lancer au grand publique.  \end{document}

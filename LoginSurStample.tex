@@ -106,17 +106,18 @@ Ce module support les versions de Play 2.1.x, 2.0.x et 1.x, il est relativement 
 SecureSocial est extensible, il est basé sur un modèle d'architecture qui vous permet d'ajouter des nouveaux services d'authentifications.
 \newline
 \textbf{Utilisation de SecureSocial :}
-\begin{itemize}
-\item \textit{carambla} \footnote{http://carambla.com/} : Une application Apple/Android pour chercher, payer ... un parking
-\item \textit{wimha} \footnote{http://www.wimha.com/} : Un service qui vous permet de proposer et de découvrir des intérêts dans différentes villes du monde.
-\item \textit{webservices} \footnote{https://webservices.io/} : Webservices pour la conversion de documents et fusion de documents...
-\end{itemize}
+\textit{carambla} \footnote{http://carambla.com/} : Une application Apple/Android pour chercher, payer ... un parking.
+\textit{wimha} \footnote{http://www.wimha.com/} : Un service qui vous permet de proposer et de découvrir des intérêts dans différentes villes du monde.
+\textit{webservices} \footnote{https://webservices.io/} : Webservices pour la conversion de documents et fusion de documents...
+
 \subsection{Première Solution}
-Les étapes : 
-\newline
-J'ai ajouté une nouvelle table dans la base de donnée Stample pour mettre le hash (email, random number, time ),
-Envoyer le mail avec un lien url?hash=hach,
-Enfin verifier d'existance du hash dans la base puis faire un sort.
+Les étapes d'implémentation: 
+\begin{itemize}
+\item J'ai ajouté une nouvelle table dans la base de donnée Stample pour mettre le hash (email, random number, time ),
+\item Envoyer le mail avec un lien url?hash=hach,
+\item Enfin verifier d'existance du hash dans la base puis faire un sort.
+
+\end{itemize}
  
 
 \section{Remise à Zéro}
