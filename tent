@@ -1,0 +1,64 @@
+Tent est un protocole de communication distribués. Tent peut être utilisé comme un emplacement de stockage personnel des données, un seul signe sur le service, et / ou un réseau social distribué. N'importe qui peut héberger leur propre serveur de tent. En plus d'accueillir des tents, Tent.is donne quelques applications de base pour aider les utilisateurs à démarrer, une application d'administration du serveur et une application de micro-blogging.
+
+
+
+http://en.wikipedia.org/wiki/Tent_(protocol) form wiki tent is a protocol for open, decentralized social networking.
+
+
+
+Both the protocol / open source staff and Tent.is are built and maintained by the same team which is half American, half Canadian...
+
+c'est un protocole, ce n'est pas une plate-forme. n'importe quelle personne peux crée un serveur Tent. il n'est pas centralisée pour limiter les autorités des développeurs ou les utilisateurs.
+
+
+
+les posts sont au coeur de tent protocole, Chaque morceau de données dans la tent, à partir d'un message d'état de configuration de l'application, est stockée dans un post.
+
+
+
+les Posts sont du JSON consiste de trois composants logic :
+
+-metadata 
+
+-content 
+
+-binary attachment
+
+
+
+Tent vous permet de sauvegarder vos données dans une place dont vous avez le contrôle. 
+
+
+
+vous pouvez choisir un fournisseur d'hébergement ou lancer votre propre serveur.
+
+
+
+si vous souhaitez déplacer les hosts vous aurez vos données et relations.
+
+
+
+tent utilise https & JSON pour transporter les posts entre les serveurs et les apps.
+les entités sont les utilisateurs de tant il autorisent apps, établi des relations et lire/publier des posts les entités sont définie avec leur entité URL; https/http URL liée les métadata
+ chaque entité a 1 ou plusieurs serveur qui la représente.
+posts sont les atomics unité de contenu dans tent chaque post est un JSON, ils ont des fichiers attacher.
+APPS fourni des UI (user interface) pour tent.
+tent c'est une machine readable JSON api les apps doivent être autorisée avec oauth2
+relationShips : les entités établissent des relations lorsque il envoient des messages qui mentionnent d'autres entités. 
+comparer tent avec RDF et pour quoi on choisie de faire une version RDF de Stample au lieu d'avoir une 
+
+
+
+On peut aussi mentionner diaspora : free personnel serveur web qui implement distributed social networking service 
+
+
+
+les fonctionnalisées trouver aussi sur les sites d'information communautaires comme haker news peut être reproduite avec tent, mais nécessairement architecturée d'une manière différente. les messages et les commentaires sont situé sur le serveur tent au lieu d'être regroupé sur un site unique ou base de donnée 
+
+
+
+
+
+
+
+Les données sont stockées dans tent comme messages. Messages, comme les fichiers, sont tapés. Il ya un petit nombre de types de poste prévues par le protocole que les serveurs utilisent des tentes. Les développeurs sont libres de créer de nouveaux types de poste pour le contenu / stockage de données.
