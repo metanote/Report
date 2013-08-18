@@ -7,6 +7,7 @@
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{amsmath,mathtools}
 \usepackage{subcaption}
 \title{Login sur Stample\\}
 \author{Ben Rajeb Moncef,\\
@@ -127,29 +128,38 @@ Les étapes d'implémentation:
 \section{Remise à Zéro}
 
 \subsection{Phase préliminaire}
-D'après Jonathan winandy, pour réussir il faut passer par les étapes suivantes :
+D'après Jonathan Winandy, pour réussir il faut passer par les étapes suivantes :
 \begin{itemize}
 
 \item Do It :Commencer par poser le problème et puis écrire du code qui répond a ce besoin.  
-\item Do It-Right : Tester le code et l'améliorer.
+\item Do It-Right : Se débarrasser du code inutile, faire des testes et des amélioration.
 \item Do It-Fast : Cleaner le code et vérifier les tests.
 \end{itemize}
-\subsection{Implémentation \& Intégration}
-
-Pour l'intégration de SecureSocial :
-\begin{itemize}
-\item La vérification de compilation, intégration basique de secure Social dans Stample.
-\item Une écriture basique dans la mémoire et l'implémentation de UserService.
-\item Working Wiring : Authentification avec email.
-\item Ajout du template signUp email.
-\item Résoudre les problèmes de Token et de Memory.
-\end{itemize}
+\subsection{Implémentation \& Intègration}
+Pour l'intégration de SecureSocial 
+\[
+Do It =
+\begin{cases}
+\text{La vérification de compilation, intégration basique de secure Social dans Stample.}\\
+\text{Une écriture basique dans la mémoire et l'implémentation de UserService.}\\
+\text{Working Wiring : Authentification avec email.}
+\end{cases}
+\]
+\[
+Do It-Righ =
+\begin{cases}
+\text{Ajout du template signUp email.}\\
+\text{Résoudre les problèmes de Token et de Memory.}
+\end{cases}
+\]
+\textit{L'étape Do It-Fast n'est pas encore faite mais elle pourrait être mise dans le planing des tâches plus tard. }
 \subsection{Keep user Logged In SecureSocial :Authenticator Cookie}
 Dans le fichier de configuration de SecureSocial il y avait des changements à faire comme la configuration des cookies comme absoluteTimeOutInMinutes(La durée d'authentification d'un utilisateur dans une session. Après cela l'utilisateur doit relogger (par défaut à 720 minutes - 12 heures).
 idleTimeoutInMinutes(La durée de session valable depuis la dernière requête (par défaut 30)).
+Comme le sujet, l'idée est de limiter les partie amovible, donc on s'est simuler une implimentation in-memory de l'authentificaion pour commencer.
 \subsection{Customisation des templates}
 Après l'intégration et la stabilisation des différentes interractions avec le module, j'ai travaillé pour refactoriser les différentes views pour s'adapter avec ce module (le signup, resetPasswordPage, authorisationCode, startResetPassword) et un main global.
-En effet, l'activationCode c'est un code secret pour protéger la version Beta de Stample(autoriser l'accé qu'à certain utilisateur), il y avait un activationCode écrit dans le code de la plateforme que nous avons enlevé pour mettre dans l'interface admin la possibilité de génèrer des diffirents codes d'autorisations.
+L'activationCode c'est un code secret pour protéger la version Beta de Stample(autoriser l'accé qu'à certain utilisateur), il y avait un activationCode écrit dans le code de la plateforme que nous avons enlevé pour mettre dans l'interface admin la possibilité de génèrer des diffirents codes d'autorisations.
 
 \subsection{Partie Administrateur sur Stample}
 Stample c'est un réseau social en cours de construction il y avait plusieurs bugs et amélioration à ajouter sur la plateforme durant mon stage.
@@ -162,22 +172,24 @@ J'ai implémenté les différentes templates (authorisationCodes, createCode).
 \begin{minipage}[c]{.5\linewidth}
 \begin{center}
 \fbox{
-\includegraphics[width=6cm,height=80mm,scale=1]{image1.png}}\hspace{1em}
-\caption{Create secret interface}
-\label{fig:Create authorisationCode interface}
+\includegraphics[width=6cm,height=80mm,scale=1]{image2.png}}
+\caption{Admin page}
+\label{fig:Admin page}
 \end{center}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{.5\linewidth}
 \begin{center}
 \fbox{
-\includegraphics[width=6cm,height=80mm,scale=1]{image2.png}}
-\caption{Admin page}
-\label{fig:Admin page}
+\includegraphics[width=6cm,height=80mm,scale=1]{image1.png}}\hspace{1em}
+\caption{Create secret interface}
+\label{fig:Create authorisationCode interface}
 \end{center}
 \end{minipage}
 \end{figure}
-
+\textit{Depuis l'interface Admin le bouton create add autorization code ouvre la deuxième interface pour la creation d'un code secret aléatoire avec un le nombre d'usage qui est un champ obligatoire ou bien en choisissant un code d'autorisation.
+Le bouton manage authorisation codes permet d'afficher les codes d'authorisation enregistrer et le nombre d'usage restant.
+}
 \section{Conclusion}
 Cette partie d'authentification sur Stample m'a beaucoup apporté en écrivant du code/des templates et en fixant des bugs.
 Sur Backend, l'interaction des controllers, les models et les views avec les différentes classes et traits qui existant déjà m'avait beaucoup aider à comprendre le langage en ajoutant du code compatible avec ce qui existe.
