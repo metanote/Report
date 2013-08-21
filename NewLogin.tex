@@ -12,7 +12,7 @@ Ensuite, remise à zéro en appliquant les méthodes d'ingénierie nous avons r�
 \paragraph{}
 J'ai eu l'accé au code source du projet privé sur le compte Git d'Edward avec son autorisation.
 Au début, j'ai utilisé un outil windows pour la gestion de mes projets Git d'apprentissage.
-Ensuite, j'ai changé mon PC parce que les outils SBT, play, mongo.... ont des besoins importants en ressources (mémoire,CPU). Stample m'a prêté un MacBookPro. 
+Ensuite, j'ai changé mon PC parce que les outils SBT, play, mongo, ect... ont des besoins importants en ressources (mémoire,CPU). Stample m'a prêté un MacBookPro. 
 \subparagraph{}
 Pour interragir avec Stample, j'ai consolidé mes connaissances dans le terminal-land (tmux\footnote{http://tmux.sourceforge.net/}, zsh\footnote{https://github.com/robbyrussell/oh-my-zsh}, bash, git et SBT).
 \section{Schéma Model View Controller (MVC)}
@@ -28,9 +28,9 @@ C'est une architecture de play et généralement un design classique d'une appli
        
 \end{figure}
 \begin{itemize}
-\item Model : Le modèle est la représentation spécifique au domaine de l'information sur laquelle l'application fonctionne. La logique de domaine ajoute «sens» aux données brutes (par exemple : le calcul des totaux, taxes de l'utilisateur, les frais d'expédition pour un panier ...). La plupart des applications utilisent un mécanisme de stockage persistant comme une base de données pour stocker des données. MVC ne mentionne pas spécifiquement la couche d'accès aux données, car il est entendu d'être en dessous, ou encapsulé par le modèle.
+\item Model : Le modèle est la représentation spécifique au domaine de l'information sur laquelle l'application fonctionne. La logique de domaine ajoute «sens» aux données brutes (par exemple : le calcul des totaux, taxes de l'utilisateur, les frais d'expédition pour un panier, ect...). La plupart des applications utilisent un mécanisme de stockage persistant comme une base de données pour stocker des données. MVC ne mentionne pas spécifiquement la couche d'accès aux données, car il est entendu d'être en dessous, ou encapsulé par le modèle.
 \item View : La vue rend le modèle dans une forme appropriée pour les interactions, en général une interface utilisateur. Plusieurs views peuvent exister pour un modèle unique, à des fins différentes. Dans un format de préférence "Web" (HTML, XML ou JSON) en fonction de la négociation avec le navigateur et des capacités du controlleur.
-\item Controller : Le contrôleur répond aux événements (généralement des actions de l'utilisateur) et les traites, et peut également invoquer des changements sur le modèle. Dans une application Web, les événements sont généralement des requêtes HTTP: un contrôleur écoute les requêtes HTTP, extrait les données pertinentes de la «événement», telles que les paramètres de chaîne de requête, demander des têtes ... Et applique les modifications sur les objets du modèle sous-jacent.
+\item Controller : Le contrôleur répond aux événements (généralement des actions de l'utilisateur) et les traites, et peut également invoquer des changements sur le modèle. Dans une application Web, les événements sont généralement des requêtes HTTP: un contrôleur écoute les requêtes HTTP, extrait les données pertinentes de la «événement», telles que les paramètres de chaîne de requête, demander des têtes, ect... Et applique les modifications sur les objets du modèle sous-jacent.
 
 \end{itemize}
 
@@ -43,7 +43,7 @@ C'est une architecture de play et généralement un design classique d'une appli
                 \label{fig:Default play packages}
        
 \end{figure}
-\textit{Ainsi que d'aures packages qu'on a rajouté comme event, api, services, repository, plugins, templates...}
+\textit{Ainsi que d'aures packages qu'on a rajouté comme event, api, services, repository, plugins, templates, ect...}
 
 \subsection{Cycle de vie d'une requête}
 Le framework play est entièrement Stateless[1] et orientée Request/Response. Tout les requête HTTP suivent le même path.

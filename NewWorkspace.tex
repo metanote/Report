@@ -52,7 +52,7 @@ Le JSON est désérialisé dans des objets métiers
 \subsubsection{Communication entre la base et l'API}
 \paragraph{}
 On utilise le driver Casbah MongoDB en Scala et une librairie "Salat" qui permet une bonne intégration de Casbah dans l'application.
-Salat permet de sérialiser les objets métiers (case class) en BSON \footnote{http://bsonspec.org/}, cette libairie propose un DAO (Data Access Object) générique un model companion qui expose les méthodes basique des requêtes Mongo (find(), findById(), search()...)
+Salat permet de sérialiser les objets métiers (case class) en BSON \footnote{http://bsonspec.org/}, cette libairie propose un DAO (Data Access Object) générique un model companion qui expose les méthodes basique des requêtes Mongo (find(), findById(), search(), ect...)
 \subsubsection{Communication entre L'API et ElasticSearch}
 \paragraph{}
 L'indexation dans la base se fait manuellement après l'insertion, la mise à jour d'un document MongoDB dans la base de donnée.
@@ -68,7 +68,7 @@ Le build est réalisé par SBT, il faudrait mettre en place un Jenkins qui fera 
 \subsubsection{Les collections MongoDB}
 \paragraph{}
 Stample structure les données sous forme de diffirents collections.
-Ils Sont tous identifier par un ObjectId, elle regroupe tout les informations nécessaire sur les utilisateurs (Compte utilisateurs, Stamples ...).
+Ils Sont tous identifier par un ObjectId, elle regroupe tout les informations nécessaire sur les utilisateurs (Compte utilisateurs, Stamples, ect...).
 \subsection{Configuration de départ}
 \subsubsection{Description de la configuration}
 \paragraph{}
