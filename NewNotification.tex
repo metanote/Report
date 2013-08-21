@@ -14,6 +14,12 @@ Les commentaires présentent aussi une fonctionnalité intéressante pour interr
 \section{Notifications}
 Le systéme de notification représente dans la base mongo par une collection notification\_inbox cette dernière elle se compose d'un ID, notification et isRead.
 On utilise des servises : addNotificationsForUser, getNotificationForUser, deleteNotification, readNotification.
+\begin{figure}[H]
+        \centering
+                \centering
+                \includegraphics[width=\textwidth]{Notifications.png}
+               
+\end{figure}
 \section{Commentaires}
 J'ai travaillé dans cette partie sur l'implémentation des tests d'intégrations et des services update, delete comment.
 Les tests sont écritent en Specs2 (software specification for Scala) : c'est une librérie pour écrire des spécifications des softwares executables et lancer sur la console avec sbt "it:test".
