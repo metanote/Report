@@ -2,12 +2,13 @@
 \section*{}
 \section{Introdutction}
 \paragraph{}
-Dans une première partie suite à la tâche "Login sur Stample" assignée dans \textit{Trello}\footnote{https://trello.com/} avec Jonathan Winandy, j'ai commancé à lire, comprendre le code du backend Stample et à voir l'architecture du projet. 
+Dans une première partie suite à la tâche "Login sur Stample" assignée dans \textit{Trello}\footnote{https://trello.com/} avec Jonathan Winandy, j'ai commencé à lire, comprendre le code du backend Stample et à voir l'architecture du projet. 
 \newline
 \textit{Problématique, Comment faire pour intégrer une couche horizontal sans tout casser coté Frontend ?}
 \subparagraph{}
 Au début, j'ai implémenté une solution basique, relativement fonctionnel mais non achevé suite au complexités reliée à la compatibilité avec le code existant.
-Ensuite, remise à zéro en appliquant les méthodes d'ingénierie nous avons réussi à finaliser la tâche en moins de temps.
+Ensuite, une deuxième approche en appliquant les méthodes d'ingénierie nous avons réussi à finaliser la tâche en moins de temps.
+
 \subsection{Configuration du projet Stample}
 \paragraph{}
 J'ai eu l'accé au code source du projet privé sur le compte Git d'Edward avec son autorisation.
@@ -17,7 +18,8 @@ Ensuite, j'ai changé mon PC parce que les outils SBT, play, mongo, ect... ont d
 Pour interragir avec Stample, j'ai consolidé mes connaissances dans le terminal-land (tmux\footnote{http://tmux.sourceforge.net/}, zsh\footnote{https://github.com/robbyrussell/oh-my-zsh}, bash, git et SBT).
 \section{Schéma Model View Controller (MVC)}
 \paragraph{}
-En effet, dans la plateforme Stample il s'agit des requêtes affectées à des controlleurs à l'aide de régles de routage, ces derniers impliquent des services dans un packge services et sont implémentés dans un sous package "impl" (implementation) puis de même pour les repository et des views qui contiennent les templates.
+Dans la plateforme Stample, les requêtes sont affectées aux controlleurs à l'aide de régles de routage. Les controlleurs utilisent des services et des repository du packges services/repository implémentés dans un sous package "impl" (implementation).
+Les views contiennent les templates html.
 C'est une architecture de play et généralement un design classique d'une application java que j'ai découvert.
 \begin{figure}[H]
         \centering
@@ -63,11 +65,11 @@ Le framework play est entièrement Stateless[1] et orientée Request/Response. T
        
 \end{figure}
 \newpage
-\section{Présentation du contexte Business}
+\section{Le login dans l'application existante}
 \subsection{Login V0}
 \paragraph{}
-Dans la version précedente, il s'agit d'un formulaire classique à remplir pour créer un nouveau compte utilisateur qui sera stocker avec les coordonnées nécessaires (firstname, fullname, username, passeword, secretCode).
-Cela est une première approche, comme la plateforme est en cours de construction des nouveaux besoins apparaissent au fur et à mesure.
+Dans la version précedente (version V0), il s'agit d'un formulaire classique à remplir pour créer un nouveau compte utilisateur qui sera stocker avec les coordonnées nécessaires (firstname, fullname, username, passeword, secretCode).
+Cela est une première approche. Comme la plateforme est en cours de construction des nouveaux besoins apparaissent au fur et à mesure.
 Pour plusieurs raisons : Satisfaire la clientèle (utilisateurs de Stample), faciliter la perception de l'interraction et offrir des nouvelles fonctionnalitées classique mais indisponsable.  
 \subsection{Critiques}
 \paragraph{}
@@ -76,7 +78,7 @@ Il nous manque l'envoi des emails d'information lors des diffèrents étapes d'i
 \subsection{Fonctionalités manquantes}
 \subsubsection{Envoi des mails}
 \paragraph{}
-Les utilisateurs de la platefome doivent être notifier par mail lors de l'inscription, l'activation du compte et le changement du mot de passe. 
+Les utilisateurs de la platefome doivent être notifiés par email lors de l'inscription, l'activation du compte et le changement du mot de passe. 
 Les diffèrents emails nécessaires sont signupEmail, welcomeEmail, alreadyRegistredEmail, unknownNotice, passwordResetEmail, passwordChangeNotice.
 \subsubsection{Authentification avec d'autres plateformes}
 \paragraph{}
@@ -85,18 +87,19 @@ Cette fonctionnalités facilite l'inscription et rendre cette tâche rapide pour
 \subsubsection{Rest mot de passe}
 \paragraph{}
 Plusieurs utilisateurs, changent leurs mot de passe d'un site à un autre ce qui provoque souvent l'oublie du password.
-La gestions des mots de passe oublié est parmis les fonctionnalités indispensable sur une plateforme.
-\subsubsection{AuthCode}
+La gestions des mots de passe oublié est parmi les fonctionnalités indispensable sur une plateforme.
+\subsubsection{Activation code}
 \paragraph{}
 La version Beta de Stample est protégée avec un code d'activation, c'est une pratique habituelle pour sécuriser une plateforme mise en ligne et en cours de construction.
 \section{Première approche}
 \subsection{Etude du modéle}
 \paragraph{}
-Après quelques jours pour faire des considérations de conceptions et de mieux comprendre SecureSocial, j'ai réalisé que la mise en œuvre des méthodes n'était pas difficile à comprendre. C'est bien la conception de la logique dans un service backend qui compte. 
+SecureSocial est un plugin permettant l'ajout de l'interface utilisateur d'authentification d'une application baser sur les services des protocoles OAuth1, OAuth2 et OpenID.
+Après quelques jours pour faire des considérations de conceptions et de mieux comprendre SecureSocial, j'ai réalisé que la mise en œuvre des méthodes n'était pas trop difficile à comprendre. C'est bien la conception de la logique dans un service backend qui compte. 
 SecureSocial offre des APIs Scala et Java, on utilise ce module Scala pour le Backend de la plateforme.
-Les services d'authentifications utilisent a catégorie des services de premiers plans comme Google, Twitter, Facebook ect..., Il offre aussi un mécanisme de username/password avec les fonctionnaliées Signup, Login, Rest Password.
+Les services d'authentifications utilisent une catégorie des services de premiers plans comme Google, Twitter, Facebook ect..., Il offre aussi un mécanisme de username/password avec les fonctionnaliées Signup, Login, Rest Password.
 \subparagraph{}
-Ce module est compatible avec les versions de Play 2.1.x, 2.0.x et 1.x, il est relativement rapide à intégrer dans une application en suivant les instructions sur \textit{le site}\footnote{http://securesocial.ws/guide/getting-started.html}.
+Ce module est compatible avec les versions de Play 2.1.x, 2.0.x et 1.x, les instructions pour l'intégration sur \textit{le site}\footnote{http://securesocial.ws/guide/getting-started.html}.
 SecureSocial est extensible, il est basé sur un modèle de design qui vous permet d'ajouter des nouveaux services d'authentifications.
 
 \subsection{Première Solution}
@@ -108,16 +111,26 @@ Les étapes d'implémentation:
 
 \end{itemize}
 Solution que j'ai envisagé, elle a provoqué une approche non stable en terme d'efficacité et de consistance.
-\section{Remise à Zéro}
+\section{Deuxième approche}
 \subsection{Phase préliminaire}
 D'après Jonathan Winandy, pour réussir il faut passer par les étapes suivantes :
 \begin{itemize}
 
 \item Do It :Commencer par poser le problème et puis écrire du code qui répond à ce besoin.  
 \item Do It-Right : Se débarrasser du code inutile, faire des testes et des amélioration.
-\item Do It-Fast : Cleaner le code et vérifier les tests.
+\item Do It-Fast : Nettoyer le code et vérifier les tests.
 \end{itemize}
-\subsection{Implémentation \& Intègration}
+
+\subsection{Sauvegarde de session}
+\paragraph{}
+Dans le fichier de configuration de SecureSocial, J'avais besoin de changer : La configuration des cookies "absoluteTimeOutInMinutes"(La durée d'authentification d'un utilisateur dans une session), l'utilisateur doit relogger après ce timing de 720 minutes (par défaut) à 7200 minutes.
+La durée de session valable depuis la dernière requête  "idleTimeoutInMinutes" de 30 minutes (par défaut) à 42000 minutes.
+Comme le sujet, l'idée est de limiter les partie amovible, donc on s'est simuler une implimentation "in-memory" de l'authentificaion pour commencer.
+\subsection{Customisation des templates}
+\paragraph{}
+Après l'intégration et la stabilisation des différentes interractions avec le module, j'ai travaillé pour refactoriser les différentes views pour s'adapter avec ce module (le signup, resetPasswordPage, authorisationCode, startResetPassword) et un main global.
+L'activationCode c'est un code secret pour protéger la version Beta de Stample(autoriser l'accé qu'à certain utilisateur), il y avait un activationCode écrit dans le code de la plateforme que nous avons enlevé pour mettre dans l'interface admin la possibilité de génèrer des diffirents codes d'autorisations.
+\section{Implémentation \& Intègration}
 Pour l'intégration de SecureSocial 
 \[
 Do It =
@@ -135,17 +148,7 @@ Do It-Righ =
 \end{cases}
 \]
 \textit{L'étape Do It-Fast n'est pas encore faite mais elle pourrait être mise dans le planing des tâches plus tard. }
-\subsection{Keep user Logged In SecureSocial :Authenticator Cookie}
-\paragraph{}
-Dans le fichier de configuration de SecureSocial il y avait des changements à faire comme la configuration des cookies comme absoluteTimeOutInMinutes(La durée d'authentification d'un utilisateur dans une session. Après cela l'utilisateur doit relogger (par défaut à 720 minutes - 12 heures).
-idleTimeoutInMinutes(La durée de session valable depuis la dernière requête (par défaut 30)).
-Comme le sujet, l'idée est de limiter les partie amovible, donc on s'est simuler une implimentation in-memory de l'authentificaion pour commencer.
-\subsection{Customisation des templates}
-\paragraph{}
-Après l'intégration et la stabilisation des différentes interractions avec le module, j'ai travaillé pour refactoriser les différentes views pour s'adapter avec ce module (le signup, resetPasswordPage, authorisationCode, startResetPassword) et un main global.
-L'activationCode c'est un code secret pour protéger la version Beta de Stample(autoriser l'accé qu'à certain utilisateur), il y avait un activationCode écrit dans le code de la plateforme que nous avons enlevé pour mettre dans l'interface admin la possibilité de génèrer des diffirents codes d'autorisations.
-
-\subsection{Partie Administrateur sur Stample}
+\section{Partie Administrateur sur Stample}
 \paragraph{}
 Stample c'est un réseau social en cours de construction il y avait plusieurs bugs et amélioration à ajouter sur la plateforme durant mon stage.
 Parmis ces amélioration l'ajout dans l'interface administrateur de l'API la possibilité de génerer/écrire un code
@@ -175,10 +178,10 @@ J'ai implémenté les différentes templates (authorisationCodes, createCode).
 \textit{Depuis l'interface Admin le bouton create add autorization code ouvre la deuxième interface pour la creation d'un code secret aléatoire avec un le nombre d'usage qui est un champ obligatoire ou bien en choisissant un code d'autorisation.
 Le bouton manage authorisation codes permet d'afficher les codes d'authorisation enregistrer et le nombre d'usage restant.
 }
-\section{Conclusion}
+\section{Conclusion du chapitre 3}
 \paragraph{}
 Cette partie d'authentification sur Stample m'a beaucoup apporté en écrivant du code/des templates et en fixant des bugs.
 Sur Backend, l'interaction des controllers, les models et les views avec les différentes classes et traits existant m'avait permis de comprendre le langage en ajoutant du code compatible.
 \subparagraph{}
 Cette partie du développement m'a permis de reconnaitre le plugin SecureSocial qui peut servir dans d'autres projets et d'améliorer mes connaissances. 
-Ce plugin sera peut-être enlever plus tard et remplacer par l'authentification avec WebID. 
+Ce plugin sera peut-être enlevé, remplacé plus tard par l'authentification avec WebID. 

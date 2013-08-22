@@ -1,11 +1,11 @@
-\chapter{Notification \& Commentaire\\}
+\chapter{Notification \& Commentaires}
 \section{Introdutction}
 \paragraph{}
-Dans une autre phase d'implémentation de la plateforme, comme autres réseaux sociaux il est indisponsable de notifier l'utilisateur dans le cas du partage d'un stample, une catégorie, le demande d'ajout, ect...
+Dans une autre phase d'implémentation de la plateforme, comme dans les autres réseaux sociaux il est indispensable de notifier l'utilisateur dans le cas du partage d'un stample, une catégorie, le demande d'ajout, ect...
 \subparagraph{}
 Stample offre la possibiliter d'organiser le contenu diffusé sur la plateforme sous forme des catégories, le partage de ces derniers c'est une nouvelle fonctionnalité qu'on trouve sur dropbox, sauf que pour Stample les catégories sont organisées sous forme d'une arborescence similaire à un système de fichier.
 \newline
-Le stample ou autrement l'article c'est un contenu qui peut être écrit en précisant le titre, le contenu, l'auteur, la source, ect...
+Le stample ou dit autrement l'article c'est un contenu qui peut être écrit en précisant le titre, le contenu, l'auteur, la source, ect...
 Peut être aussi générer par des darg \& drop en utilisant le clipper depuis un autre site.
 \subparagraph{}
 Ces options avec le partage des stample, nécessitent de notifier les utilisateurs de la plateforme en option avec l'email et sous forme d'une alert sur le site.
@@ -15,7 +15,7 @@ Les commentaires présentent aussi une fonctionnalité intéressante pour interr
 \paragraph{}
 Le systéme de notification représente dans la base mongo par une collection notification\_inbox cette dernière elle se compose d'un ID, notification et isRead.
 On utilise des servises : addNotificationsForUser, getNotificationForUser, deleteNotification, readNotification.
-Vous trouverez ci-dessous un diagramme dans lequel j'explique le degin du getNotifications.
+Vous trouverez ci-dessous un diagramme dans lequel est expliqué le degin du getNotifications.
 \begin{figure}[H]
         \centering
                 \centering
@@ -26,7 +26,7 @@ Vous trouverez ci-dessous un diagramme dans lequel j'explique le degin du getNot
 \section{Commentaires}
 \paragraph{}
 J'ai travaillé dans cette partie sur l'implémentation des tests d'intégrations et des services update, delete comment.
-Les tests sont écritent en Specs2 (software specification for Scala) : c'est une librérie pour écrire des spécifications des softwares executables et lancer sur la console avec sbt "it:test".
+Les tests unitaires, d'intégration sont écrits en Specs2 (software specification for Scala) : C'est une librairie pour écrire des spécifications des softwares executables. Le lancement des test se fait via sbt sur la console.
 Vous trouverez par suite deux captures d'écran une pour le lancement du test sbt et l'autre du code.
 Il faut ajouter les dependencies du plugin dans le fichier ApplicationBuilt du projet.
 
@@ -50,9 +50,9 @@ Il faut ajouter les dependencies du plugin dans le fichier ApplicationBuilt du p
 \end{minipage}
 \end{figure}
 
-\section{Conclusion}
+\section{Conclusion du chapitre 4}
 \paragraph{}
 Dans cette partie du Stage, j'ai découvet le systéme de notification en travaillant sur des sous tâches, une première approche pour le commentStample et j'ai écris les tests nécessaires pour la création, la mise à jour et la suppression des commentaires.
 \subparagraph{}
-Le chapitre postérieur sera des altérnatives sur les reséaux sociaux centralisées et distribuées relative un future Stample en cours de construction.
-Des bibliothéques sont misent en ligne un projet open source "banana-rdf" et "RWW-Play", Henry Story, travaille sur ces bibliothéques pour les adaptées au plateforme Stample.
+Le chapitre suivant présentera une étude sur des altérnatives relative un futur Stample en cours de construction.
+Des bibliothéques sont mises en ligne un projet open source "banana-rdf" et "RWW-Play", Henry Story et des membres du W3C, travaillent sur ces bibliothéques.
