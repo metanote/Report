@@ -1,0 +1,86 @@
+\chapter{Présentation de la Plateforme Stample}
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\title{Présentation de la Plateforme Stample\\}
+\author{Ben Rajeb Moncef,\\
+        Université de Jean Monnet}
+
+\begin{document}
+% generates the title
+\maketitle
+% insert the table of contents
+\tableofcontents
+\maketitle
+\newpage
+\section{Introdutction}
+Au cours de ma première année de master Web Intelligence à l'université de Jean Monnet Saint-Etienne, nous devions effectuer un stage d'une durée minimale de trois mois à compter du 18 mars.
+\paragraph{}
+Ce rapport présente le travail que j'ai effectué lors de mon stage au sein du Stample.
+\newline
+Ce stage a été une bonne opportunité, je me suis familiarisé avec un environnement technique, un ensemble d'application Scala/PlayFrameWork, GuitHub et de découvrir la vie professionnelle, ainsi que d'apprendre la philosophie du web et de travailler avec un groupe ambitieux.
+\paragraph{}
+Stample s'est avéré un projet intéressant et très enrichissant pour une expériance professionnelle. Grace à ce stage, j'ai travaillé sur des diffèrentes fonctionnalitées d'un réseau social.
+\paragraph{}
+Le but de ce rapport n’est pas de faire uniquement une présentation exhaustive de tous les aspects techniques que j’ai pu apprendre ou approfondir, mais aussi de manière synthétique et claire, de faire un tour d’horizon des aspects techniques et humains auxquels j’ai été confrontés.
+\paragraph{}
+Il apparait cohérent de commencer mon rapport de stage par une présentation de Stample, et ensuite de présenter le contexte technique. Il s’agira ensuite de décrire l'intégration de secureSocial pour le Login et l'amélioration de l'interface admin, puis de développer le systéme de notifications et commentaires pour la plateforme, finallement je conclurais mon travail en ajoutant des perspéctives.
+\newpage
+\section{Présentation de Stample}
+Stample, plateforme de réseau social, redonne à chacun le contrôle exclusif de ses informations et améliore l'ergonomie de l'apprentissage, du travail individuel et de la collaboration.
+\subsection{Stample en quelques mots}
+\begin{itemize}
+\item \textbf{Sample,} attraper facilement du contenu du web avec notre puissant bookmarklet. Drag \& drop des fichiers depuis votre ordinateur, créer des notes et articles de n'importe quel appareil.
+\item \textbf{Staple,} Gracieusement organiser votre bibliothèque de contenu personnel grâce à notre architecture d'arborescence similaire à un système de fichier.
+Options visuelles conçues avec soin des informations dont vous avez besoin et accessibles en un coup d'oeil.
+\item \textbf{Stamp,} résumer, mettre en évidence et annoter tous vos contenus.
+Partager parfaitement du contenu et des métadonnées (des catégories) avec certains membres de votre réseau.
+\end{itemize}
+\subsection{Effectif}
+L'equipe Stample est conçu par les Co-founders :
+\textit{Edward Silhol, Henry Story et Sacha Roger} une courte pésentation disponible sur le site de la plateforme\footnote{https://stample.co/}.\newline
+\textit{Amélie Medem} chercheur, Phd en computer science. Elle travaille en temps complet sur le FrontEnd de Stample.\newline
+\textit{Sébastien Lober} développeur ingénieur Backend, il travaille actuellement chez Zenika\footnote{http://www.zenika.com/} et en temps partiel pour Stample.\newline
+\textit{Jonathan Winandy}, développeur ingénieur Backend, il travaille chez Viadeo\footnote{http://us.viadeo.com/} et en temps partiel sur Stample Plateforme.\newline
+\textit{Matthieu gayon}, développeur Frontend il travaille en temps partiel sur la Plateforme.\newline
+\textit{Moncef Ben Rajeb}, développeur stagiaire Backend.\newline
+Ce sont les développeurs actuelle de Stample mais il y avait d'autres Francesco Piccoli, développeur Backend...
+\subsection{Levée de fond}
+\paragraph{}
+D'après Steve Blank\footnote{http://steveblank.com/} « Il y'a une différence fondamentale entre une entreprise établie et 
+une Startup : une Startup cherche un business model alors qu’une entreprise, elle, a déjà un 
+business model »\newline
+Suite à des réunions avec des inverstisseurs "friends and family" nous avant réussi a levée 200 mille euro.
+Notre objectif ...
+\subsection{Besoins}
+Il y a un besoin croissant d'un outil de partage sécurisé des connaissances numérique. Les gens perdent des heures chaque semaine en raison de la complexité croissante de leur vie numérique:
+\begin{itemize}
+\item Filtrage des e-mails et notifications non désirés,
+\item Créations et mises à jour de leurs profils sur de trop nombreux services isolés les uns des autres,
+\item Récupération de mots de passe perdus ou volés...
+\item L'information pertinente est de plus en plus difficile à extraire du déluge de données,
+\item La grande segmentation des outils rend l'organisation et la collaboration frustrante.
+\item Améliorer l'ergonomie de l'apprentissage et du travail par la contextualisation avancée de l'information,
+
+\end{itemize}
+\subsection{Concurrence}
+\begin{itemize}
+\item Stockage en ligne: Dropbox, Box, Google Drive, etc…
+\item Réseaux sociaux: Facebook, Tumblr, Pinterest, Instagram, etc…
+\item Aggrégateurs et plateformes de blogs: WordPress, Twitter, Reddit, Scoop.it, Paper.li, Flipboard, Zite, Jolicloud, etc…
+\item Réseaux sociaux professionnels: LinkedIn, Quora, Yammer, Podio, etc…
+\item Outils de note et d'organisation d'informations: Evernote, SpringPad, Clipboard, Pearltrees, Kippt, Google Keep, etc…
+\item Outils de partage des connaissances: Mendeley, Kno, Scribd, SlideShare, Issuu
+
+\end{itemize}
+\paragraph{}
+Stample est conçu pour s'adapter aux gestes et aux usages quotidiens des gens. Les utilisateurs de la plateforme pourront chacun construire leur réseau de connaissances personnelles, en évaluant leurs sources et les contenus qu'ils partagent.
+Stample utilise la mécanique du jeu pour encourager les gens à partager des informations hautement qualifiées et contextualités.
+
+\end{document}

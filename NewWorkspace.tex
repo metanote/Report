@@ -10,13 +10,13 @@ Vous trouverez plus de détailles sur l'environnement du travail sur ma page\foo
 \section{Working tools}
 \subsection{Environnement de Développement}
 \begin{itemize}
-\item PlayFramework\footnote{http://www.playframework.com/} 2.1.0
-\item JDK 7
-\item Maven3
+\item PlayFramework\footnote{http://www.playframework.com/} 2.1.0 : Un Framework open source facilite la creation des APIs web en Scala, Java. Avec Play. Il suffit de recharger la page web pour voir les modiffications de la classe Scala.
+\item JDK 7 : Contient les bibliothèques JAVA de base, les outils de compilation et se charge à la transfert du bytecode destiné à la JVM. 
+\item Maven3 : Un outil logiciel libre pour la gestion et l'automatisation de production des projets logiciels Java permet la synchronisation des projets indépendants.
 \item OS X 10.8.4
-\item SBT\footnote{http://www.scala-sbt.org/} 0.12.4
-\item ElasticSearch\footnote{http://www.elasticsearch.org/} 19.4.0
-\item MongoDB\footnote{http://www.mongodb.org/} 2.2.x
+\item SBT\footnote{http://www.scala-sbt.org/} 0.12.4 : "simple build tool" Un support pour compiler le code Scala.
+\item ElasticSearch\footnote{http://www.elasticsearch.org/} 19.4.0 :  Un moteur de recherche libre vise à offrir des fonctionnalités avancées de recherche à n'import quelle API.
+\item MongoDB\footnote{http://www.mongodb.org/} 2.2.x : Un système de gestion de base de données orientée documents(NoSQL). Il permet de manipuler des objets structurés au format BSON (JSON binaire), sans schéma prédéterminé.
 \end{itemize}
 \subsection{Langages de Programmation}
 \begin{itemize}
@@ -34,7 +34,7 @@ Vous trouverez plus de détailles sur l'environnement du travail sur ma page\foo
 \item Base de donnée : Mongodb NoSQL data base;
 \item outils de compilation automatique : sbt.
 \end{itemize}
-\section{Aspects technique de Stample}
+\section{Aspects techniques de Stample}
 \subsection{Architecture}
 \begin{figure}[H]
         \centering
@@ -55,7 +55,7 @@ On utilise le driver Casbah MongoDB en Scala et une librairie "Salat" qui permet
 Salat permet de sérialiser les objets métiers (case class) en BSON \footnote{http://bsonspec.org/}, cette libairie propose un DAO (Data Access Object) générique et un model compagnon qui expose les méthodes basique des requêtes Mongo (find(), findById(), search(), ect...)
 \subsubsection{Communication entre L'API et ElasticSearch}
 \paragraph{}
-ElasticSearch vise à offrir des fonctionnalités avancées de recherche à n'import quelle API. L’idée d’ElasticSearch est d’offrir une solution de recherche à usage général, qui peut évoluer d’une seule machine à plusieurs centaines.  
+L’idée d’ElasticSearch est d’offrir une solution de recherche à usage général, qui peut évoluer d’une seule machine à plusieurs centaines.  
 L'indexation dans la base se fait manuellement après l'insertion ou la mise à jour d'un document MongoDB dans la base de donnée.
 L'échec d'indexation est non bloquant car il est ratrappé par un traitement spécifique d'exception.
 \subparagraph{}

@@ -1,6 +1,6 @@
 \chapter{L'authentification sur Stample}
 \section*{}
-\section{Introdutction}
+\section{Introduction}
 \paragraph{}
 Dans une première partie suite à la tâche "Login sur Stample" assignée dans \textit{Trello}\footnote{https://trello.com/} avec Jonathan Winandy, j'ai commencé à lire, comprendre le code du backend Stample et à voir l'architecture du projet. 
 \newline
@@ -16,7 +16,7 @@ Au début, j'ai utilisé un outil windows pour la gestion de mes projets Git d'a
 Ensuite, j'ai changé mon PC parce que les outils SBT, play, mongo, ect... ont des besoins importants en ressources (mémoire,CPU). Stample m'a prêté un MacBookPro. 
 \subparagraph{}
 Pour interragir avec Stample, j'ai consolidé mes connaissances dans le terminal-land (tmux\footnote{http://tmux.sourceforge.net/}, zsh\footnote{https://github.com/robbyrussell/oh-my-zsh}, bash, git et SBT).
-\section{Schéma Model View Controller (MVC)}
+\section{Schema Model View Controller (MVC)}
 \paragraph{}
 Dans la plateforme Stample, les requêtes sont affectées aux controlleurs à l'aide de régles de routage. Les controlleurs utilisent des services et des repository du packges services/repository implémentés dans un sous package "impl" (implementation).
 Les views contiennent les templates html.
@@ -130,7 +130,7 @@ Comme le sujet, l'idée est de limiter les partie amovible, donc on s'est simule
 \paragraph{}
 Après l'intégration et la stabilisation des différentes interractions avec le module, j'ai travaillé pour refactoriser les différentes views pour s'adapter avec ce module (le signup, resetPasswordPage, authorisationCode, startResetPassword) et un main global.
 L'activationCode c'est un code secret pour protéger la version Beta de Stample(autoriser l'accé qu'à certain utilisateur), il y avait un activationCode écrit dans le code de la plateforme que nous avons enlevé pour mettre dans l'interface admin la possibilité de génèrer des diffirents codes d'autorisations.
-\section{Implémentation \& Intègration}
+\section{Implémentation \& Intégration}
 Pour l'intégration de SecureSocial 
 \[
 Do It =
