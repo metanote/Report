@@ -1,0 +1,68 @@
+\chapter{Ideas2d}
+\section{Introduction}
+\paragraph{}
+Pour l'intérêt de Stample, j'avais besoin d'apprendre Scala.
+Suite aux informations, tutoriels que j'ai suivi durant mon stage dans le but d'améliorer ma pensé fonctionelle. J'ai décidé de développer une page web personnelle pour mettre en valeur ce que j'ai appris.
+\subparagraph{}
+Au départ, l'idée consistait à écrire le contenu du rapport en HTML5 et l'héberger ligne puis de l'imprimer, mais cela n'était pas possible vu que la page peut contenir des secrets profesionnels. 
+\subparagraph{}
+Sur Ideas2d\footnote{http://ideas2d.com/moncef/home.php}, un tutoriel intéressant pour les débutants en Scala.
+Ce chapitre donne une idée générale sur Scala, vous trouverez plus de détailles sur ma page web.
+\section{Contexte de Scala}
+\paragraph{}
+En 1996, James Gosling a conçu JAVA 1.0 avec Sun Microsystems.
+Java a remporté plusieurs victoires : le débat du « write once/run everywhere », la gestion de la mémoire, une plateforme d'entreprise, un écosystème open-source énorme.\newline
+Martin Odersky, qui n'est moins que l'inventeur du langage Scala a été aussi dans d'autres travaux de recherche scientifiques, langages de programmation (Pizza, GJ, Funnel langage ect...) et compilateurs. Lui a donné une belle réputation dans SON domaine.
+\subparagraph{}
+Ce langage est conçu à  Ecole polytechnique fédérale de lausanne en 2003, ça dernière version 2.10. Dans la communauté il y a Paris Scala User Groupe.\newline
+Le nom Scala viens du besoin d'un langage multi-paradigme (Programmation concurrente, Programmation fnctionnelle, Programmation Acteur, ect...). Il est scalable, adaptable. Scala peut être vu comme un métalangage.
+\section{Caractéristiques de Scala}
+\subsection{Higher order functions}
+\paragraph{}
+C'est des fonctions qui prennent en paramètre d'autres fonction avec des appelles récursives ou dont le résultat est une fonction.
+Le higher order function est très utilisé dans les programmes Scala.
+\subsection{Hiérarchie Scala}
+Dans Scala toutes est objet, la racine présenter par la classe Any comme Object en JAVA.
+Les deux grand sous classes sont AnyRef supertype de tous les types références(vers les Scalaobject, Java classes, ect...);
+AnyVal supertype de tous type de valeur (contenant les classes Int, Float, String, ect...).
+En descendant dans la hiérarchie en trouve la class Nothing, elle herite de tous les autres classes.
+\subparagraph{}
+Techniquement Scala mélange la programmation orienté objet et fonctionnelle. Les deux styles de programmation ont des forces complémentaires quand il s'agit de l'évolutivité. Il tourne sur la machine virtuelle JAVA. Parmis ces points forts il est compatible avec les libréries JAVA.
+Dans la hiérarchie des classes tout est objets.
+Scala est statiquement et fortement typé c'est à dire qu'on déclare une variable et on l'affect une chaine de caractère elle sera automatiquement de type "String".
+\subsection{Collections}
+Il y a plusieurs concepts intéressants en Scala qu'on peut trouver dans autres langages de programmation fonctionnelle :
+\begin{itemize}
+\item \textbf{Map} : une collection pair de (clé/valeur). Toute valeur peut être récupérée en fonction de sa clé. Les clés sont uniques dans le Map, mais les valeurs n'ont pas besoin d'être unique.
+\item \textbf{Option} : un conteneur de zéro ou un élément de type donné. Une "Option[T]" peut être soit un "Some[T]" ou un objet "None".
+\item \textbf{List} : une collection contenant des éléments de même type. 
+\item \textbf{Autres collections } : les Sets, Iterators, ect...
+\end{itemize}
+\section{Classes \& Objets}
+\subsection{Classes}
+\paragraph{}
+Une classe est un modèle pour les objets. Une fois que vous définissez une classe, vous pouvez créer des objets à partir du modèle de classe avec le mot-clé "new".
+\subsection{Objets Singleton}
+\paragraph{}
+Scala est plus orientée objet que Java parce que en Scala nous ne pouvons pas avoir des membres statiques. Au lieu de cela, Scala possède des objets uniques. Un singleton est une classe qui peut avoir qu'une seule instance 'objet'. Vous créez singleton à l'aide du mot-clé "object" au lieu de mot-clé "class". Puisque vous ne pouvez pas instancier un objet singleton, vous ne pouvez pas passer des paramètres au constructeur principal.
+\subsection{Trait}
+\paragraph{}
+Les Traits(similaire à des interface en Java) sont utilisés pour définir les types d'objets en spécifiant la signature des méthodes prises en charge. Scala permet également de traits qui seront partiellement mises en œuvre, mais les traits ne peut pas avoir des paramètres de constructeur.
+\section{Pattern Matching}
+\paragraph{}
+Pattern Matching (similaire au Switch case)est le deuxième élément le plus largement utilisé de Scala, aprèsfunction values. Scala fournit un grand soutien pour pattern matching pour le traitement des messages.
+\subparagraph{}
+Un pattern match comprend une séquence d'alternatives, chacune commençant par le cas de mots clés. Chaque solution comprend un motif et une ou plusieurs expressions, qui sera évalué si le motif correspond. Un symbole flèche => sépare le motif sur les expressions.
+\section{Conclusion du chapitre 3}
+\paragraph{}
+Dans ce chapitre, j'ai essayé de donner une idée générale sur le langage. Pour plus de détailles et des exemples vous pouvez consulter Ideas2d. 
+La pratique et les exercices sont les seuls moyen de avoir la spécificité de ce langage.
+\subparagraph{}
+La prochaine section se focalise sur la solution développée pour le login sur Stample.
+
+
+
+
+
+
+

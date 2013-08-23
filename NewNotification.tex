@@ -26,10 +26,17 @@ Vous trouverez ci-dessous un diagramme dans lequel est expliqué le degin du get
 \section{Tests d'intégration des commentaires}
 \paragraph{}
 Dans cette partie, j'ai travaillé sur l'implémentation des tests d'intégrations et des services update, delete comment.
+\begin{figure}[H]
+        \centering
+                \centering
+                \includegraphics[width=\textwidth]{Comment.png}
+               \caption{Architecture des comments}
+		\label{fig:Design des commentaires}
+\end{figure}
+\subparagraph{}
 Les tests unitaires, d'intégration sont écrits en Specs2 (software specification for Scala) : C'est une librairie pour écrire des spécifications des softwares executables. Le lancement des test se fait via sbt sur la console.
 Vous trouverez par suite deux captures d'écran une pour le lancement du test sbt et l'autre du code.
 Il faut ajouter les dependencies du plugin dans le fichier ApplicationBuilt du projet.
-
 \begin{figure}[H]
 \begin{minipage}[c]{.7\linewidth}
 \begin{center}
@@ -49,7 +56,6 @@ Il faut ajouter les dependencies du plugin dans le fichier ApplicationBuilt du p
 \end{center}
 \end{minipage}
 \end{figure}
-
 \section{Conclusion du chapitre 4}
 \paragraph{}
 Dans cette partie du Stage, j'ai découvet le systéme de notification en travaillant sur des sous tâches, une première approche pour le commentStample et j'ai écris les tests nécessaires pour la création, la mise à jour et la suppression des commentaires.
