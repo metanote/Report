@@ -68,24 +68,14 @@ Un nombre de projet actuellement relèvent le défi à créer le réseau social 
 ------------------------------------------------------
 \end{center}
 \begin{itemize}
-  \item Diaspora \footnote{https://diasporafoundation.org/about} : 
+  \item Diaspora \footnote{https://diasporafoundation.org/about} : C'est le premier réseau social décentralisé qui a eu un très grand écho dans les médias histoire ou différentes ordinateurs indépendant dits "graines" sont amenés directement entre eux tout en abritant leurs propre profil.
+\newline
+ \item TENT \footnote{https://tent.io/about} : C'est un protocole de communication distribués. Tent peut être utilisé comme un emplacement de stockage personnel des données, un seul signe sur le service, et / ou un réseau social distribué. N'importe qui peut héberger leur propre serveur de tent. En plus d'accueillir des tents, Tent.is donne quelques applications de base pour aider les utilisateurs à démarrer, une application d'administration du serveur et une application de micro-blogging.
 \subparagraph{}
-Diaspora c'est le premier réseau social décentralisé qui a eu un très grand écho dans les médias histoire ou différentes ordinateurs indépendant dits "graines" sont amenés directement entre eux tout en abritant leurs propre profil.
-
-- NoseRub \footnote{http://en.wikipedia.org/wiki/Noserub} : 
-\subparagraph{}
-C'est un protocole distribué sous licence MIT (Massachusetts Institute of Technology) 
-il a été créé par Dirk Olbertz, permettant aux utilisateurs de réseau de garder les information de leur profile sur leur propre terminaux, et à leurs terminaux d'interagir et de se synchroniser automatiquement.
-  \item TENT \footnote{https://tent.io/about}: 
-\subparagraph{}
-Tent est un protocole de communication distribués. Tent peut être utilisé comme un emplacement de stockage personnel des données, un seul signe sur le service, et / ou un réseau social distribué. N'importe qui peut héberger leur propre serveur de tent. En plus d'accueillir des tents, Tent.is donne quelques applications de base pour aider les utilisateurs à démarrer, une application d'administration du serveur et une application de micro-blogging.
-\subparagraph{}
-""Both the protocol / open source staff and Tent.is are built and maintained by the same team which is half American, half Canadian, ect...""
 N'importe quelle personne peux crée un serveur Tent. Il n'est pas centralisé pour limiter les autorités des développeurs ou les utilisateurs.
 \subparagraph{}
 Les posts sont au coeur de tent protocole, Chaque morceau de données dans la tent, à partir d'un message d'état de configuration de l'application, est stockée dans un post.
-
-Les Posts sont du JSON consiste de trois composants logic :
+Les posts sont du JSON consiste de trois composants logic :
 \begin{itemize}
   \item metadata 
  \item content 
@@ -98,36 +88,31 @@ Les Posts sont du JSON consiste de trois composants logic :
 
 3) Si vous souhaitez déplacer les hosts vous aurez vos données et relations.
 \begin{itemize}
-  \item tent utilise https et JSON pour transporter les posts entre les serveurs et les apps.
-\item les entités sont les utilisateurs de tant il autorisent apps, établi des relations et lire/publier des posts les entités sont définie avec leur entité URL; https/http URL liée les métadata
-\item chaque entité a 1 ou plusieurs serveur qui la représente.
-\item posts sont les atomics unité de contenu dans tent chaque post est un JSON, ils ont des fichiers attacher.
-\item APPS fourni des UI (user interface) pour tent.
-\item tent c'est une machine readable JSON api les apps doivent être autorisée avec oauth2
-\item relationShips : les entités établissent des relations lorsque il envoient des messages qui mentionnent d'autres entités. 
-
+\item Tent utilise https et JSON pour transporter les posts entre les serveurs et les applications.
+\item Les entités sont les utilisateurs de Tent, ils autorisent des applications, établir des relations et lire/publier des posts les entités sont définie avec leur entité URL; https/http URL liée aux métadonnées.
+\item Chaque entité a un ou plusieurs serveur qui la représente.
+\item Les posts sont les atomics unité de contenu dans tent chaque post est un JSON, ils ont des fichiers attacher.
+\item Tent c'est une machine de lécture en JSON api, les apps doivent être autorisée avec oauth2.
+\item relationShips : Les entités établissent des relations lorsque il envoient des messages qui mentionnent d'autres entités. 
 \end{itemize}
 \subparagraph{}
 Les fonctionnalités trouvées aussi sur les sites d'information communautaires comme \textit{hacker news} \footnote{http://thehackernews.com/} peuvent être reproduite avec tent, mais nécessairement architecturée d'une manière différente. les messages et les commentaires sont situé sur le serveur tent au lieu d'être regroupé sur un site unique ou base de donnée. 
 \subparagraph{}
-Les données sont stockées dans tent comme messages. Messages, comme les fichiers, sont tapés. Il ya un petit nombre de types de poste prévues par le protocole que les serveurs utilisent des tentes. Les développeurs sont libres de créer de nouveaux types de poste pour le contenu / stockage de données.
-
-  \item En france Turbulences \footnote{http://ticmigrations.fr/fr/etat-de-lart/projets/116-turbulence} :
-\subparagraph{}
- Propose une solution technologique open-source, utilisant pour une variété d'acteurs institutionnels et de secteur privé afin d'assembler et de lancer leur service de réseau social, intégré au services en ligne existant au travers de protocoles et de standards libres.
-
-\textbf{On peut cité aussi }
-\item Freenet \footnote{http://fr.wikipedia.org/wiki/Freenet} : C'est un réseau informatique anonyme et distribué construit sur l'Internet. Il vise à permettre une liberté d'expression et d'information totale fondée sur la sécurité de l'anonymat, et permet donc à chacun de lire comme de publier du contenu. Il offre la plupart des services actuels d'Internet (courriel, Web, etc.). 
+Les données sont stockées dans tent comme messages. Messages, comme les fichiers, sont tapés. Il y a un petit nombre de types de poste prévues par le protocole que les serveurs utilisent des tentes. Les développeurs sont libres de créer de nouveaux types de poste pour le contenu / stockage de données.
+\newline
+\item En france Turbulences \footnote{http://ticmigrations.fr/fr/etat-de-lart/projets/116-turbulence} : Propose une solution technologique open-source, utilisant pour une variété d'acteurs institutionnels et de secteur privé afin d'assembler et de lancer leur service de réseau social, intégré au services en ligne existant au travers de protocoles et de standards libres.
+\newline
+\item Freenet \footnote{http://fr.wikipedia.org/wiki/Freenet} : C'est un réseau informatique anonyme et distribué construit sur l'Internet. Il vise à permettre une liberté d'expression et d'information totale fondée sur la sécurité de l'anonymat, et permet donc à chacun de lire comme de publier du contenu. Il offre la plupart des services actuels d'Internet (courriel, Web, etc...). 
 \end{itemize}
-\textit{C'est deux derniers ne sont pas des réseaux sociaux distribués mais ils ont un design distribué. }
-
-\subsection{Réseautage social décentralisé en ligne}
-\textit{Description d'un style d'architecture distribuée}\newline
 \paragraph{}
-Dans un cadre de réseau social distribué et ouvert, un utilisateur n'a pas besoin d'adhérer à un service particulier de réseautage social tels que Facebook ou MySpace. Au lieu de cela, l'utilisateur choisit un serveur qui il a confiance pour héberger ses propres données telles que son FOAF (Friend-Of-A-Friend) [ fichier, son journal d'activité et ses albums photos. Étant donné que nous nous référons à ces fichiers avec leurs URI, ils peuvent effectivement être stockés sur des serveurs différents\footnote{http://dig.csail.mit.edu/2008/Papers/MSNWS/}.
-
+\textit{C'est deux derniers ne sont pas des réseaux sociaux distribués mais ils ont un design distribué. }
+\newpage
+\subsection{Réseautage social décentralisé en ligne}
+\textit{Description d'un style d'architecture distribuée}
+\paragraph{}
+Dans un cadre de réseau social distribué et ouvert, un utilisateur n'a pas besoin d'adhérer à un service particulier de réseautage social tels que Facebook ou MySpace. Au lieu de cela, l'utilisateur choisit un serveur qui il a confiance pour héberger ses propres données telles que son FOAF (Friend-Of-A-Friend) [ fichier, son journal d'activité et ses albums photos]. Étant donné que nous nous référons à ces fichiers avec leurs URIs, ils peuvent effectivement être stockés sur des serveurs différents\footnote{http://dig.csail.mit.edu/2008/Papers/MSNWS/}.
 \subparagraph{}
-En utilisant FOAF dans un cadre de mise en réseau social décentralisé, le WEBID d'un utilisateur peut être utilisé comme un point d'accès à ses données. Les autres utilisateurs qui veulent accéder au réseau de l'utilisateur sociaux (liste d'amis), son statut, ses photos, ou d'écrire sur son tableau de message personnel, seront versés à son dossier de FOAF et obtenir les URI correspondant. En stockant les données dans un serveur de confiance choisie par l'utilisateur, les utilisateurs ont plus de contrôle sur les données. 
+En utilisant FOAF dans un cadre de mise en réseau social décentralisé, le WEBID d'un utilisateur peut être utilisé comme un point d'accès à ses données. Les autres utilisateurs qui veulent accéder au réseau de l'utilisateur sociaux (liste d'amis), son statut, ses photos, ou d'écrire sur son tableau de message personnel, seront versés à son dossier de FOAF et obtenir les URIs correspondant. En stockant les données dans un serveur de confiance choisie par l'utilisateur, les utilisateurs ont plus de contrôle sur les données. 
 \subparagraph{}
 Il ya aussi une option pour créer des politiques de contrôle d'accès à grains fins beaucoup en utilisant des langages de la politique comme de l'air [Kagal et al. 2008] pour aider à limiter l'accès à ses données ou des applications. Contrairement à un site centralisé de réseautage social, les utilisateurs devront s'authentifier sur des serveurs différents quand ils veulent accéder aux données confidentielles de leurs amis. 
 \subparagraph{}
@@ -145,25 +130,10 @@ Cela peut être fait en utilisant par exemple le protocole OpenID [Recordon et F
 \textit{Ces alternatives de réseaux sociaux décentralisé prendra-t-elle suffisamment pied pour constitué un véritable défi pour le géant Facebook ?}
 \subparagraph{}
 Le point d'interrogation principale concerne sans doute la réceptivité des utilisateurs à la possibilité de migrer non seulement sur une nouvelle plate-forme, mais aussi sur une application dans la prise en main, la facilité d'utilisation et les bénéfices sont peut être moins immédiats "la gestion en autonomie de son propre 'petit' serveur".
+\subparagraph{}
 Les différents projet expérimentent à la décentralisation appliqué aux réseaux sociaux présentent peut être une premier réelle tentative, à la fois social et technique d'optimisation, des outils de réseautage social.
 \subparagraph{}
-Le team Stample souhaitent avoir deux versions une centralisé stable en changent l'ergonomie de l'apprentissage de l'utilisateur et en l'offrent des nouvelles fonctionnalités et puis quand on réussit à stabiliser la version décentralisé nous allons le lancer au grand publique.  
+Le team Stample souhaitent avoir deux versions une centralisée stable en changent l'ergonomie de l'apprentissage et en l'offrent des nouvelles fonctionnalités. Puis, un Stample décentralisé sera mise en ligne dés qu'il soit bien stabiliser et tester.  
 
-\begin{figure}[H]
-        \centering
-        \begin{subfigure}[b]{0.7\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{network-centralized.png}
-                \caption{Centralized network [This Not]}
-                \label{fig:Centralized network}
-        \end{subfigure}
-      
-         \begin{subfigure}[b]{0.7\textwidth}
-                \centering
-                \includegraphics[width=\textwidth]{network-distributed.png}
-                \caption{Destributed network [This]}
-                \label{fig:Destributed network}
-        \end{subfigure}
-        \caption{Networks}\label{fig:Networks}
-\end{figure}
+
 
