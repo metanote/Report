@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper,oneside]{book}
 \usepackage[francais]{babel}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -29,5 +30,8 @@
 \backmatter
 \include{NewConclusion}
 \include{NewCritiques}
+\bibliographystyle{plain}
+\renewcommand{\refname}{Bibliographie}
+\bibliography{biblioo.bib}
 \include{NewAnnexe}
 \end{document}
