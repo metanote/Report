@@ -6,7 +6,7 @@ Suite aux informations, tutoriels que j'ai suivies durant mon stage dans le but 
 \subparagraph{}
 Au départ, l'idée consistait à écrire le contenu du rapport en HTML5 et l'héberger en ligne puis de l'imprimer, mais cela n'était pas possible vu que la page peut contenir des secrets profesionnels. 
 \subparagraph{}
-Sur Ideas2d\footnote{http://ideas2d.com/moncef/home.php}, un tutoriel intéressant pour les débutants en Scala.
+Sur ma page web personnelle Ideas2d\footnote{http://ideas2d.com/moncef/home.php}, un tutoriel intéressant pour les débutants en Scala.
 Ce chapitre donne une idée générale sur Scala, vous trouverez plus de détailles sur ma page web.
 \section{Contexte de Scala}
 \paragraph{}
@@ -28,8 +28,8 @@ Les deux grands sous-classes sont "AnyRef", supertype de tous les types référe
 "AnyVal", supertype de tous types de valeur (Int, Float, String, ect...).
 En descendant dans la hiérarchie en trouve la class Nothing, elle hérite de tous les autres classes.
 \subparagraph{}
-Techniquement Scala mélange la programmation orientés objet et fonctionnelle. Les deux styles de programmation ont des forces complémentaires quand il s'agit de l'évolutivité. Il tourne sur la machine virtuelle JAVA. Parmis ces points forts, il est compatible avec les libréries JAVA.
-Scala est statiquement et fortement typé ,c'est à dire qu'on déclare une variable et on l'affecte à une chaine de caractère. Elle sera automatiquement de type "String".
+Techniquement Scala mélange la programmation orientée objet et fonctionnelle. Les deux styles de programmation ont des forces complémentaires quand il s'agit de l'évolutivité. Il tourne sur la machine virtuelle JAVA. Parmis ces points forts, il est compatible avec les libréries JAVA.
+Scala est statiquement et fortement typé, c'est à dire qu'on déclare une variable et on l'affecte à une chaine de caractère. Elle sera automatiquement de type "String".
 \subsection{Collections}
 Il y a plusieurs concepts intéressants en Scala qu'on peut trouver dans autres langages de programmation fonctionnelle :
 \begin{itemize}
@@ -44,20 +44,19 @@ Il y a plusieurs concepts intéressants en Scala qu'on peut trouver dans autres 
 Une classe est un modèle pour les objets. Une fois que vous définissez une classe, vous pouvez créer des objets à partir du modèle de classe avec le mot-clé "new".
 \subsection{Objets Singleton}
 \paragraph{}
-Scala est plus orientée objet que Java parce que en Scala nous ne pouvons pas avoir des membres statiques. Au lieu de cela, Scala possède des objets uniques. Un singleton est une classe qui peut avoir qu'une seule instance 'objet'. Vous créez singleton à l'aide du mot-clé "object" au lieu de mot-clé "class". Puisque vous ne pouvez pas instancier un objet singleton, vous ne pouvez pas passer des paramètres au constructeur principal.
+Scala est plus orientée objet que Java, parce que en Scala nous ne pouvons pas avoir des membres statiques. Au lieu de cela, Scala possède des objets uniques. Un singleton est une classe qui peut avoir qu'une seule instance 'objet'. Vous créez singleton à l'aide du mot-clé "object" au lieu de mot-clé "class". Puisque vous ne pouvez pas instancier un objet singleton, vous ne pouvez pas passer des paramètres au constructeur principal.
 \subsection{Trait}
 \paragraph{}
-Les Traits(similaire à des interface en Java) sont utilisés pour définir les types d'objets en spécifiant la signature des méthodes prises en charge. Scala permet également de traits qui seront partiellement mises en œuvre, mais les traits ne peut pas avoir des paramètres de constructeur.
+Les Traits similaire à des interface en Java sont utilisés pour définir les types d'objets en spécifiant la signature des méthodes prises en charge. Scala permet également les traits d'être partiellement implémentés, mais ils ne peut pas avoir des paramètres de constructeur. Les traits Scala, et à l’inverse des interfaces de Java, peuvent avoir des champs et implémenter des méthodes.
 \section{Pattern Matching}
 \paragraph{}
-Pattern Matching (similaire au Switch case)est le deuxième élément le plus largement utilisé de Scala, aprèsfunction values. Scala fournit un grand soutien pour pattern matching pour le traitement des messages.
+Pattern Matching similaire au Switch case est le deuxième élément le plus largement utilisé de Scala, après "function values". Scala fournit un grand soutien pour pattern matching pour le traitement des messages.
 \subparagraph{}
 Un pattern match comprend une séquence d'alternatives, chacune commençant par le cas de mots clés. Chaque solution comprend un motif et une ou plusieurs expressions, qui sera évalué si le motif correspond. Un symbole flèche => sépare le motif sur les expressions.
 \section{Conclusion du chapitre 3}
 \paragraph{}
-Dans ce chapitre, j'ai essayé de donner une idée générale sur le langage. Pour plus de détailles et des exemples vous pouvez consulter Ideas2d. 
-La pratique et les exercices sont les seuls moyen pour avoir la spécificité de ce langage.
-\subparagraph{}
+Dans ce chapitre, j'ai essayé de donner une idée générale sur le langage. Pour plus de détails et d'exemples vous pouvez consulter Ideas2d. 
+La pratique et les exercices sont les seuls moyens pour avoir la spécificité de ce langage.
 La prochaine section se focalise sur la solution développée pour le login sur Stample.
 
 
