@@ -1,14 +1,26 @@
 
-
-\documentclass[12pt]{article}
+\documentclass[pdftex,12pt,a4paper]{report}
 \usepackage[latin1]{inputenc}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{array}
+
 \usepackage[cyr]{aeguill}
 \usepackage[francais]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{eso-pic}
 \begin{document}
 
 \begin{titlepage}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\newcommand{\HRule}{\rule{\linewidth}{0.9mm}} % Defines a new command for the horizontal lines, change thickness here
+\AddToShipoutPicture{%
+  \AtUpperLeftCorner{1cm}{1cm}{\includegraphics[width=5cm]{ujm.png}}
+  \AtUpperRightCorner{1cm}{1cm}{\includegraphics[width=5cm]{Stample.jpg}}
+}
+\vspace*{2cm}
+
 
 \center % Center everything on the page
  
@@ -26,27 +38,27 @@
 
 \HRule \\[1.2cm]
 { \huge \bfseries Cr\'eation Des Futures Collaboratives Pour Stample}\\[1.6cm] % Title of your document
-\HRule \\[3cm]
+\HRule \\[2cm]
  
 %----------------------------------------------------------------------------------------
 %	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{flushleft} \large
-\emph{Auteur:}\\
+\emph{Auteur}\\
 Moncef \textsc{Ben Rajeb} % Your name
 \end{flushleft}
 \end{minipage}
 ~
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{flushleft} \large
-\emph{Superviseurs:} \\
-Henry \textsc{Story}, % Supervisor's Name 
-Jonathan \textsc{Winandy}, Dr. Pierre \textsc{Maret} % Supervisor's Name
+\emph{Superviseurs} \\
+Henry \textsc{Story}, \newline 
+Jonathan \textsc{Winandy},\newline Dr. Pierre \textsc{Maret} % Supervisor's Name
 
 \end{flushleft}
-\end{minipage}\\[4cm]
+\end{minipage}\\[1.5cm]
 
 % If you don't want a supervisor, uncomment the two lines below and remove the section above
 %\Large \emph{Author:}\\

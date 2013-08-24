@@ -2,9 +2,9 @@
 \section{Introduction}
 \paragraph{}
 Pour l'intérêt de Stample, j'avais besoin d'apprendre Scala.
-Suite aux informations, tutoriels que j'ai suivi durant mon stage dans le but d'améliorer ma pensé fonctionelle. J'ai décidé de développer une page web personnelle pour mettre en valeur ce que j'ai appris.
+Suite aux informations, tutoriels que j'ai suivies durant mon stage dans le but d'améliorer ma pensé fonctionnelle. J'ai décidé de développer une page web personnelle pour mettre en valeur ce que j'ai appris.
 \subparagraph{}
-Au départ, l'idée consistait à écrire le contenu du rapport en HTML5 et l'héberger ligne puis de l'imprimer, mais cela n'était pas possible vu que la page peut contenir des secrets profesionnels. 
+Au départ, l'idée consistait à écrire le contenu du rapport en HTML5 et l'héberger en ligne puis de l'imprimer, mais cela n'était pas possible vu que la page peut contenir des secrets profesionnels. 
 \subparagraph{}
 Sur Ideas2d\footnote{http://ideas2d.com/moncef/home.php}, un tutoriel intéressant pour les débutants en Scala.
 Ce chapitre donne une idée générale sur Scala, vous trouverez plus de détailles sur ma page web.
@@ -13,24 +13,23 @@ Ce chapitre donne une idée générale sur Scala, vous trouverez plus de détail
 En 1996, James Gosling a conçu JAVA 1.0 avec Sun Microsystems.
 Java a remporté plusieurs victoires : le débat du « write once/run everywhere », la gestion de la mémoire, une plateforme d'entreprise, un écosystème open-source énorme.
 \subparagraph{}
-Martin Odersky, qui n'est moins que l'inventeur du langage Scala a été aussi dans d'autres travaux de recherche scientifiques, langages de programmation (Pizza, GJ, Funnel langage ect...) et compilateurs. Lui a donné une belle réputation dans son domaine.
+Martin Odersky, qui n'est moins que l'inventeur du langage Scala. Il a effectué dans d'autres travaux de recherche scientifiques, langages de programmation (Pizza, GJ, Funnel langage ect...) et compilateurs. Cela lui a donné une reconnaissance dans ce domaine.
 \subparagraph{}
-Ce langage est conçu à  Ecole polytechnique fédérale de lausanne en 2003, ça dernière version 2.10. Dans la communauté il y a Paris Scala User Groupe.\newline
-Le nom Scala viens du besoin d'un langage multi-paradigme (Programmation concurrente, Programmation fnctionnelle, Programmation Acteur, ect...). Il est scalable, adaptable. Scala peut être vu comme un métalangage.
+Ce langage est conçu à  Ecole polytechnique fédérale de Lausanne en 2003, sa dernière version est Scala 2.10.\newline
+Le nom Scala vient du besoin d'un langage multi-paradigme (Programmation concurrente, Programmation fonctionnelle, Programmation Acteur, ect...). Scala peut être vu comme un métalangage.
 \section{Caractéristiques de Scala}
 \subsection{Higher order functions}
 \paragraph{}
-C'est des fonctions qui prennent en paramètre d'autres fonction avec des appelles récursives ou dont le résultat est une fonction.
+Ce sont des fonctions qui prennent en paramètre d'autres fonctions avec des appelles récursifs dont le résultat est une nouvelle fonction.
 Le higher order function est très utilisé dans les programmes Scala.
 \subsection{Hiérarchie Scala}
-Dans Scala toutes est objet, la racine présenter par la classe Any comme Object en JAVA.
-Les deux grand sous classes sont AnyRef supertype de tous les types références(vers les Scalaobject, Java classes, ect...);
-AnyVal supertype de tous type de valeur (contenant les classes Int, Float, String, ect...).
-En descendant dans la hiérarchie en trouve la class Nothing, elle herite de tous les autres classes.
+Dans Scala tout est objet, la racine présentée par la classe Any comme "Object" en JAVA.
+Les deux grands sous-classes sont "AnyRef", supertype de tous les types références (Scalaobject, Java classes, ect...);
+"AnyVal", supertype de tous types de valeur (Int, Float, String, ect...).
+En descendant dans la hiérarchie en trouve la class Nothing, elle hérite de tous les autres classes.
 \subparagraph{}
-Techniquement Scala mélange la programmation orienté objet et fonctionnelle. Les deux styles de programmation ont des forces complémentaires quand il s'agit de l'évolutivité. Il tourne sur la machine virtuelle JAVA. Parmis ces points forts il est compatible avec les libréries JAVA.
-Dans la hiérarchie des classes tout est objets.
-Scala est statiquement et fortement typé c'est à dire qu'on déclare une variable et on l'affect une chaine de caractère elle sera automatiquement de type "String".
+Techniquement Scala mélange la programmation orientés objet et fonctionnelle. Les deux styles de programmation ont des forces complémentaires quand il s'agit de l'évolutivité. Il tourne sur la machine virtuelle JAVA. Parmis ces points forts, il est compatible avec les libréries JAVA.
+Scala est statiquement et fortement typé ,c'est à dire qu'on déclare une variable et on l'affecte à une chaine de caractère. Elle sera automatiquement de type "String".
 \subsection{Collections}
 Il y a plusieurs concepts intéressants en Scala qu'on peut trouver dans autres langages de programmation fonctionnelle :
 \begin{itemize}
