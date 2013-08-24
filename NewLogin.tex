@@ -48,7 +48,7 @@ C'est une architecture de play et généralement un design classique d'une appli
 \textit{Ainsi que d'aures packages qu'on a rajouté comme event, api, services, repository, plugins, templates, ect...}
 
 \subsection{Cycle de vie d'une requête}
-Le framework play est entièrement Stateless[1] et orientée Request/Response. Tout les requête HTTP suivent le même path.
+Le framework play est entièrement Stateless~\cite{rest} et orientée Request/Response. Tout les requête HTTP suivent le même path.
 \begin{enumerate}
 \item Une requête HTTP reçue par le framework.
 \item Le Router Component essaie de trouver la route la plus spécifique en mesure d'accepter cette demande. Pour invoker la méthode d'action correspendante. 
