@@ -45,14 +45,18 @@ Vous trouverez plus de détailles sur l'environnement du travail sur ma page\foo
                 \label{fig:Architecture de la plateforme}
        
 \end{figure}
-\subsection{Description de l'architecture globale}
+\textit{Commentaires : }
+La figure 2.1 présente une vu globale sur l'architecture de la plateforme sous forme de trois blocs. On utilise les services web de amazon S3\footnote{http://aws.amazon.com/fr/s3/} pour stocker et extraire des données.
+Le deuxième bloc représente le Backend former par "Scala + PlayFramework + Java + MongoDB", on renvoie les données sous forme de JSON au Frontend, les communications sont éffectuées via des requêtes HTTP.
+Le troisième bloc présente le Frontend avec tous les outils informatiques de degin "CSS3 + JavaScript + HTML5". Vous aurez plus de détailles sur le Backend par suite. 
+\subsection{Description de l'architecture Backend}
 \paragraph{}
 Les requêtes HTTP sont faites en JSON.
 Le JSON est désérialisé dans des objets métiers 
 (Scala case class) pour être manipulés au sein de l'application.
 \subsubsection{Communication entre la base et l'API}
 \paragraph{}
-On utilise le driver Casbah MongoDB en Scala et une librairie "Salat" qui permet une bonne intégration de Casbah dans l'application.
+On utilise le driver Casbah\footnote{http://api.mongodb.org/scala/casbah/2.0/tutorial.html} MongoDB en Scala et une librairie "Salat" qui permet une bonne intégration de Casbah dans l'application.
 Salat permet de sérialiser les objets métiers (case class) en BSON \footnote{http://bsonspec.org/}, cette libairie propose un DAO (Data Access Object) générique et un model compagnon qui expose les méthodes basique des requêtes Mongo (find(), findById(), search(), ect...)
 \subsubsection{Communication entre L'API et ElasticSearch}
 \paragraph{}
@@ -66,11 +70,12 @@ Donc nous avons le même document dans MongoDB et ElasticSearch. Cela permet de 
 On utlise un client JAVA pour ElasticSearch.
 \subsubsection{SBT}
 \paragraph{}
-Le "build" est réalisé par SBT, il faudrait mettre en place un outil d'intégration "Jenkins" qui fera tourner les tests unitaires et embarqués à chaque "push" d'une branche git pour réparer les regressions et que nous en soyons alertés.
+Le "build" est réalisé par SBT, il faudrait mettre en place un outil d'intégration "Jenkins"\footnote{http://fr.wikipedia.org/wiki/Jenkins\_(informatique)} qui fera tourner les tests unitaires et embarqués à chaque "push" d'une branche git pour réparer les regressions et que nous en soyons alertés.
 \subsubsection{Les collections MongoDB}
 \paragraph{}
 Stample structure les données sous forme de différentes collections.
 Elles sont toutes identifiées par un ObjectId, elles regroupent toutes les informations nécessaire sur les utilisateurs (Compte utilisateurs, Stamples, ect...).
+\newpage
 \subsection{Configuration de départ}
 \subsubsection{Description de la configuration}
 \paragraph{}
@@ -78,7 +83,6 @@ Le projet contient de quatre répertoires séparer : \textit{fixturedatabase} co
 \paragraph{}
 Pour l'interraction avec le projet, j'ai installé les outils cités auparavant. Ensuite, j'ai configuré ma machine avec les paths nécessaires pour lancer sbt, play, mongo et elasticSearch. Puis, j'ai lancé le mvn dans le répertoire stample-search. Enfin il est indisponsable de lancer play ou sbt et de générer les fichier idea, eclipse ou autre dans stample-web selon l'IDE envisagé.    
 Le README.md du projet écrit avec le langage de balisages légers Markdown\footnote{http://fr.wikipedia.org/wiki/Markdown} contient les détails nécessaires pour la configuration du projet.
-\newpage
 \subsection{Gestion du travaille en groupe}
 \paragraph{}
 Les régles du travaille en groupe sur le projet Git :
