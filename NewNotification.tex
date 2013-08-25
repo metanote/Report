@@ -13,13 +13,13 @@ Ces options avec le partage des stample, nécessitent de notifier les utilisateu
 Les commentaires présentent aussi une fonctionnalité intéressante pour interragir avec le contenu d'un stample.
 \section{Notifications}
 \paragraph{}
-Vous trouverez ci-dessous un diagramme dans lequel j'explique le degin du getNotifications.
+La figure 5.1 présente le design et les différentes étapes du getNotifications.
 \begin{figure}[H]
         \centering
                 \centering
                 \includegraphics[width=\textwidth]{Notifications.png}
-               \caption{Diagramme to Get Notifications}
-		\label{fig:Diagramme to Get Notifications}
+               \caption{getNotifications design}
+		\label{fig:getNotifications design}
 \end{figure}
 \subsection{Système de Notifications}
 Les notifications sont représentées dans la base de données par une collection "notification\_inbox" identifier par un "\_id" ObjectID et des "notifications" sous forme d'une liste d'objet Notification(content, id, date, isRead) intialiser à "Null".
