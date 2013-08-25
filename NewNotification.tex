@@ -13,7 +13,7 @@ Ces options avec le partage des stample, nécessitent de notifier les utilisateu
 Les commentaires présentent aussi une fonctionnalité intéressante pour interragir avec le contenu d'un stample.
 \section{Notifications}
 \paragraph{}
-Le systéme de notification représente dans la base mongo par une collection notification\_inbox cette dernière elle se compose d'un ID, notification et isRead.
+Le systéme de notification représente dans la base mongo par une collection "notification\_inbox" cette dernière elle se compose d'un ID, notification et isRead.
 On utilise des servises : addNotificationsForUser, getNotificationForUser, deleteNotification, readNotification.
 Vous trouverez ci-dessous un diagramme dans lequel est expliqué le degin du getNotifications.
 \begin{figure}[H]
@@ -23,6 +23,18 @@ Vous trouverez ci-dessous un diagramme dans lequel est expliqué le degin du get
                \caption{Diagramme to Get Notifications}
 		\label{fig:Diagramme to Get Notifications}
 \end{figure}
+\subsection{Système de Notifications}
+Les notifications sont représentées dans la base de données par une collection "notification\_inbox" identifier par un "\_id" ObjectID et des "notifications" sous forme d'une liste d'objet Notification(content, id, date, isRead) intialiser à "Null".
+On utilise un modéle de notification "deux cases classes"(NotificationInbox, Notification).
+Les notifications sont gérées dans la base de données grâce à des fontions (getNotificationsForUser, addNotification, deleteNotification, ect ...).
+On utilise ces méthodes implémentées dans "Notification repository" pour nos services (getNotification, deleteNotification, ect...).
+Les différentes routes utilisées pour les notifications font appel au "notificationController" pour le "get, read, delete" Notifications.
+\subsection{Problèmes}
+Après l'implémentation des services de notifications, nous avons eu un problème au niveau de l'envoie des informations utilisateurs avec les notifications "l'objet JSON" retourné.
+\subparagraph{}
+Pour résoudre ce problème nous avons défini un filtre "simpleFilterProvider" dans lequel on ajoute un "Set" des données privées. Cela permet de d'enlever tous les informations inutiles dans "l'objet JSON".
+
+
 \section{Tests d'intégration des commentaires}
 \paragraph{}
 Dans cette partie, j'ai travaillé sur l'implémentation des tests d'intégrations et des services update, delete comment.
