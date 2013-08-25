@@ -44,6 +44,13 @@ Dans cette partie, j'ai travaillé sur l'implémentation des tests d'intégratio
 		\label{fig:Design des commentaires}
 \end{figure}
 \subparagraph{}
+Etapes d'intégration :
+\begin{enumerate}
+\item La création des "events" pour les différentes "case classes" utilisées dans les APIs.
+\item L'ajout des values des "case classes" pour identifier les Comments, Stamples, Users. 
+\item L'implémentation des services.
+\end{enumerate}
+\subparagraph{}
 Les tests unitaires, d'intégration sont écrits en Specs2 (software specification for Scala) : C'est une librairie pour écrire des spécifications des softwares executables. Le lancement des test se fait via sbt sur la console.
 Vous trouverez par suite deux captures d'écran une pour le lancement du test sbt et l'autre du code.
 Il faut ajouter les dependencies du plugin dans le fichier ApplicationBuilt du projet.
