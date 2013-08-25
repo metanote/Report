@@ -1,33 +1,26 @@
 
-\documentclass[pdftex,12pt,a4paper]{report}
+
+\documentclass[12pt]{article}
 \usepackage[latin1]{inputenc}
-
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{array}
-
 \usepackage[cyr]{aeguill}
 \usepackage[francais]{babel}
 \usepackage[pdftex]{graphicx}
-\usepackage{eso-pic}
 \begin{document}
 
 \begin{titlepage}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.9mm}} % Defines a new command for the horizontal lines, change thickness here
-\AddToShipoutPicture{%
-  \AtUpperLeftCorner{1cm}{1cm}{\includegraphics[width=5cm]{ujm.png}}
-  \AtUpperRightCorner{1cm}{1cm}{\includegraphics[width=5cm]{Stample.jpg}}
-}
-\vspace*{2cm}
-
 
 \center % Center everything on the page
  
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
+%\begin{center}
 
+
+%\includegraphics[width=0.25\textwidth]{ujm.png}
+%\end{center}
 \textsc{\LARGE Universite Jean Monnet}\\[1.5cm] % Name of your university/college
 \textsc{\Large RAPPORT DE STAGE}\\[0.5cm] % Major heading such as course name
 \textsc{\large Master Web Intelligence}\\[0.5cm] % Minor heading such as course title
@@ -38,7 +31,7 @@
 
 \HRule \\[1.2cm]
 { \huge \bfseries Cr\'eation Des Futures Collaboratives Pour Stample}\\[1.6cm] % Title of your document
-\HRule \\[2cm]
+\HRule \\[3cm]
  
 %----------------------------------------------------------------------------------------
 %	AUTHOR SECTION
@@ -58,23 +51,23 @@ Henry \textsc{Story}, \newline
 Jonathan \textsc{Winandy},\newline Dr. Pierre \textsc{Maret} % Supervisor's Name
 
 \end{flushleft}
-\end{minipage}\\[1.5cm]
+\end{minipage}\\[4cm]
 
 % If you don't want a supervisor, uncomment the two lines below and remove the section above
 %\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
+%John \textsc{Smith}\\[2cm] % Your name
 
 %----------------------------------------------------------------------------------------
 %	DATE SECTION
 %----------------------------------------------------------------------------------------
 
-{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
 
 %----------------------------------------------------------------------------------------
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
 
-%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\includegraphics{ujm.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
  
 %----------------------------------------------------------------------------------------
 
