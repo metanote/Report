@@ -48,7 +48,6 @@ Scala est statiquement et fortement typé, c'est à dire qu'on déclare une vari
 Il y a plusieurs concepts intéressants en Scala qu'on peut trouver dans autres langages de programmation fonctionnelle "Immutable DataStructures":
 \begin{itemize}
 \item \textbf{Map} : une collection pair de (clé/valeur). Toute valeur peut être récupérée en fonction de sa clé. Les clés sont uniques dans le Map, mais les valeurs n'ont pas besoin d'être unique.
-\item \textbf{Option} : un conteneur de zéro ou un élément de type donné. Une "Option[T]" peut être soit un "Some[T]" ou un objet "None". \textit{Exemple : val x = Map("one" -> 1, "two" -> 2, "three" -> 3)}
 \item \textbf{List} : une collection contenant des éléments de même type.   \textit{Exemple : val x = List(1,2,3,4,2)}
 \item \textbf{Set } : une collection ne contient pas des duplications. \textit{Exemple : var x = Set(1,3,5,7)}
 \end{itemize}
@@ -92,6 +91,21 @@ val image: Image
 Pattern Matching similaire au Switch case est le deuxième élément le plus largement utilisé de Scala, après "Higher order function". Scala fournit un grand soutien pour pattern matching pour le traitement des messages.
 \subparagraph{}
 Un pattern match comprend une séquence d'alternatives, chacune commençant par le cas de mots clés. Chaque solution comprend un motif et une ou plusieurs expressions, qui sera évalué si le motif correspond. Un symbole flèche => sépare le motif sur les expressions.
+\newline
+\textit{Exemple :
+def anyThing(x:Any) = x match\{
+\newline
+case 5 =>"Int"
+\newline
+case true=>"Boolean"
+\newline
+case "hello"=>"String"
+\newline
+case Nil => "Empty List"
+\newline
+case \_ => "Something else"
+\}}
+
 \section{Résumé}
 \paragraph{}
 Dans ce chapitre, j'ai essayé de donner une idée générale sur le langage. Pour plus de détails et d'exemples vous pouvez consulter Ideas2d. 
