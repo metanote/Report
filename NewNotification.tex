@@ -11,6 +11,26 @@ Peut être aussi générer par des darg \& drop en utilisant le clipper depuis u
 Ces options avec le partage des stample, nécessitent de notifier les utilisateurs de la plateforme en option avec l'email et sous forme d'une alert sur le site.
 \newline
 Les commentaires présentent aussi une fonctionnalité intéressante pour interragir avec le contenu d'un stample.
+\newpage
+\section{Model CQRS}
+\paragraph{}
+Dans cette partie spécifique du système, nous avons adopté le model "Command Query Responsibility Seggregation" qui se repose sur la séparation, au sein d’une application, des composants de traitement métier de l’information (“command” / écriture) et de restitution de l’information (“query” / lecture).
+Cela apporte des bénéfices :
+\begin{itemize}
+\item La suppression du risque d'effet de bord, les méthodes des services "Read" ne modifient pas l'état du systéme. On peut les utiliser sans craindre de provoquer des comportement anormaux du système.
+\item Allèger les classes de service, en séparant ces classes en deux selon qu'elles réalisent les opérations de lecture/écriture, on a ine mainère naturelle et intuitive d'organiser le code de nos services.
+\item La séparation du Read et Write facilite l'exposition des services.
+\begin{figure}[H]
+        \centering
+                \centering
+                \includegraphics[width=\textwidth]{cqrs.png}
+               \caption{CQRS design}
+		\label{fig:CQRS design}
+\end{figure}
+
+
+\end{itemize}  
+\newpage
 \section{Notifications}
 \paragraph{}
 La figure 5.1 présente le design et les différentes étapes du getNotifications.
