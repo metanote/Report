@@ -28,7 +28,7 @@ Les notifications sont gérées dans la base de données grâce à des fontions 
 On utilise ces méthodes implémentées dans "Notification repository" pour nos services (getNotification, deleteNotification, ect...).
 Les différentes routes utilisées pour les notifications font appel au "notificationController" pour le "get, read, delete" Notifications.
 \subsection{Problèmes}
-Après l'implémentation des services de notifications, nous avons eu un problème au niveau de l'envoie des informations utilisateurs avec les notifications "l'objet JSON" retourné.
+Après l'implémentation des services de notifications, nous avons eu un problème de sécurité au niveau de l'envoie des informations utilisateurs avec les notifications "l'objet JSON" retourné.
 \subparagraph{}
 Pour résoudre ce problème nous avons défini un filtre "simpleFilterProvider" dans lequel on ajoute un "Set" des données privées. Cela permet de d'enlever tous les informations inutiles dans "l'objet JSON".
 
