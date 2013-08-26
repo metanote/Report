@@ -14,11 +14,11 @@ Vous trouverez plus de détails sur l'environnement du travail sur ma page\footn
 \item JDK 7 : Contient les bibliothèques JAVA de base, les outils de compilation et se charge à la transfert du bytecode destiné à la JVM. 
 \item Maven3 : Un outil logiciel libre pour la gestion et l'automatisation de production des projets logiciels Java permet la synchronisation des projets indépendants.
 \item OS X 10.8.4
-\item SBT\footnote{http://www.scala-sbt.org/} 0.12.4 : "simple build tool" Un support pour compiler le code Scala.
+\item SBT\footnote{http://www.scala-sbt.org/} 0.12.4 : "simple build tool" Un support pour compiler le code Scala. Equivalent de Maven pour Scala.
 \item ElasticSearch\footnote{http://www.elasticsearch.org/} 19.4.0 :  Un moteur de recherche libre vise à offrir des fonctionnalités avancées de recherche à n'import quelle API.
 \item MongoDB\footnote{http://www.mongodb.org/} 2.2.x : Un système de gestion de base de données orientée documents(NoSQL). Il permet de manipuler des objets structurés au format BSON (JSON binaire), sans schéma prédéterminé.
 \end{itemize}
-\subsection{Langages de Programmation}
+\subsection{Langages et formats}
 \begin{itemize}
 \item BackEnd : SCALA , JAVA, JSON
 \item FrontEnd : HTML5, JavaScript, Jquery, CSS3, JSON, Ajax. 
@@ -32,7 +32,7 @@ Vous trouverez plus de détails sur l'environnement du travail sur ma page\footn
 \subsection{Outils de développement}
 \begin{itemize}
 \item IDE : ItelliJ IDEA 12.1.14 Community Edition;
-\item Base de données : Mongodb NoSQL data base;
+\item Base de données : Mongodb;
 \item outils de compilation automatique : sbt.
 \end{itemize}
 \section{Aspects techniques de Stample}
@@ -76,15 +76,21 @@ On utlise un client JAVA pour ElasticSearch.
 Le "build" est réalisé par SBT, il faudrait mettre en place un outil d'intégration "Jenkins"\footnote{http://fr.wikipedia.org/wiki/Jenkins\_(informatique)} qui fera tourner les tests unitaires et embarqués à chaque "push" d'une branche git pour réparer les regressions et que nous en soyons alertés.
 \subsubsection{Les collections MongoDB}
 \paragraph{}
-Stample structure les données sous forme de différentes collections.
-Elles sont toutes identifiées par un ObjectId, elles regroupent toutes les informations nécessaire sur les utilisateurs (Compte utilisateurs, Stamples, ect...).
+Stample structure les données avec différentes collections de document.
+Chaque document est identifiées par un ObjectId, et représente une partie des informations de Stample.
 \newpage
 \subsection{Configuration de départ}
 \subsubsection{Description de la configuration}
 \paragraph{}
-Le projet contient de quatre répertoires séparés : \textit{fixturedatabase} contenant les fichiers JSON et leurs sérialisation binaire encodé BSON, \textit{restore} inclu le build de l'application et les plugins, \textit{stample-search} contenant les classes java et la configuration nécessaire pour le lancement du projet et \textit{stample-web} ce dernier contient les diffirents packages du code Front/back End.
+Le projet contient de quatre répertoires séparés : 
+\begin{itemize}
+\item \textit{fixturedatabase} contenant les fichiers JSON et leurs sérialisation binaire encodé BSON, 
+\item \textit{restore} inclu le build de l'application et les plugins,
+\item \textit{stample-search} contenant les classes java et la configuration nécessaire pour le lancement du projet,
+\item \textit{stample-web} ce dernier contient les diffirents packages du code Front/back End.
+\end{itemize} 
 \paragraph{}
-Afin de participer au projet, j'ai installé les outils cité précédemment dans un premier temps. Ensuite, j'ai configuré ma machine avec les paths nécessaires pour lancer sbt, play, mongo et elasticSearch. Puis, j'ai lancé le mvn dans le répertoire stample-search. Enfin il est indisponsable de lancer play ou sbt et de générer les fichier idea, eclipse ou autre dans stample-web selon l'IDE envisagé.    
+Afin de participer au projet, j'ai installé les outils cité précédemment. Ensuite, j'ai configuré ma machine avec les paths nécessaires pour lancer sbt, play, mongo et elasticSearch. Puis, j'ai lancé le mvn dans le répertoire stample-search. Enfin il est indispensable de lancer play ou sbt et de générer les fichier idea, eclipse ou autre dans stample-web selon l'IDE envisagé.    
 Le README.md du projet écrit avec le langage de balisages légers Markdown\footnote{http://fr.wikipedia.org/wiki/Markdown} contient les détails nécessaires pour la configuration du projet.
 \subsection{Gestion du travaille en groupe}
 \paragraph{}
@@ -92,11 +98,11 @@ Les régles du travaille en groupe sur le projet Git :
 \begin{enumerate}
 \item NE PAS travailler directement sur la branche master. Ce n'est que pour la production.
 \item La branche de développement principale est "preProd". A partir de cette branche on commence une nouvelle branche. 
-\item Lors du développement sur une branche, merger régulièrement preProd en elle, pour s'assurer d'être à jour avec le travail des autres développeurs.
-\item Lorsque la branche est stable et a été testé par le chef de projet, il va tester, merger dans preProd, on peut supprimer le projet.
+\item Lors du développement sur une branche, merger régulièrement preProd, pour s'assurer d'être à jour avec le travail des autres développeurs.
+\item Lorsque la branche est stable et a été testé par le chef de projet, il va merger dans preProd, on peut supprimer la branche.
 \item Utiliser toujours camelCase pour nommer les branches et des noms intelligents!
-\item Ajouter des explications intelligentes lors de chaque commit.
+\item Décrire correctement les changements dans les changelogs/commits.
 \end{enumerate}
-\section{Conclusion du chapitre 2}
+\section{Résumé}
 \paragraph{}
-Dans ce chapitre introductif, j'ai détaillé les outils qu'on utilise. Ensuite, j'ai présenté l'architécture globale de la plateforme et les diffirentes interractions. Le prochain chapitre présente une idée générale sur le langage de programmation "Scala" du Backend Stample. 
+Dans ce chapitre, j'ai détaillé les outils qu'on utilise. Ensuite, j'ai présenté l'architécture globale de la plateforme et les diffirentes interractions. Le prochain chapitre présente une idée générale sur le langage de programmation "Scala" du Backend Stample. 
