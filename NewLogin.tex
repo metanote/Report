@@ -157,25 +157,16 @@ secret pour les utilisateurs lors de l'inscription avec un nombre d'usage pour c
 Cela nécessite l'ajout des routes pour gérer et créer les code d'authentification dans l'admin 
 controller et les templates.
 J'ai implémenté les différentes templates (authorisationCodes, createCode).
+
 \begin{figure}[H]
-\begin{minipage}[c]{.5\linewidth}
-\begin{center}
-\fbox{
-\includegraphics[width=5.5cm,height=80mm,scale=1]{image2.png}}
-\caption{Admin page}
-\label{fig:Admin page}
-\end{center}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{.5\linewidth}
-\begin{center}
-\fbox{
-\includegraphics[width=5.5cm,height=80mm,scale=1]{image1.png}}\hspace{1em}
-\caption{Create secret interface}
-\label{fig:Create authorisationCode interface}
-\end{center}
-\end{minipage}
+        \centering
+                \centering
+                \includegraphics[width=10cm,height=7cm]{AdminPage.png}
+                \caption{Stample Administrator Activation Code}
+                \label{fig:Stample Administrator Activation Code}
+       
 \end{figure}
+
 \textit{Depuis l'interface Admin le bouton create add autorization code ouvre la deuxième interface pour la creation d'un code secret aléatoire avec un le nombre d'usage qui est un champ obligatoire ou bien en choisissant un code d'autorisation.
 Le bouton manage authorisation codes permet d'afficher les codes d'authorisation enregistrer et le nombre d'usage restant.
 }
