@@ -14,12 +14,13 @@ Les commentaires présentent aussi une fonctionnalité intéressante pour interr
 \newpage
 \section{Model CQRS}
 \paragraph{}
-Dans cette partie spécifique du système, nous avons adopté le model "Command Query Responsibility Seggregation" qui se repose sur la séparation, au sein d’une application, des composants de traitement métier de l’information (“command” / écriture) et de restitution de l’information (“query” / lecture).
-Cela apporte des bénéfices :
+Dans cette partie spécifique du système, nous avons adopté le model "Command Query Responsibility Seggregation"\footnote{http://martinfowler.com/bliki/CQRS.html} qui se repose sur la séparation, au sein d’une application, des composants de traitement métier de l’information (“command” / écriture) et de restitution de l’information (“query” / lecture).
+\subparagraph{}
+Les bénéfices apportés :
 \begin{itemize}
 \item La suppression du risque d'effet de bord, les méthodes des services "Read" ne modifient pas l'état du systéme. On peut les utiliser sans craindre de provoquer des comportement anormaux du système.
-\item Allèger les classes de service, en séparant ces classes en deux selon qu'elles réalisent les opérations de lecture/écriture, on a ine mainère naturelle et intuitive d'organiser le code de nos services.
-\item La séparation du Read et Write facilite l'exposition des services.
+\item Allèger les classes de service, en séparant ces classes en deux selon qu'elles réalisent les opérations de lecture/écriture, on a une manière naturelle et intuitive d'organiser le code de nos services.
+\item La séparation du "Read"/"Write" facilite l'exposition des services.
 \begin{figure}[H]
         \centering
                 \centering
